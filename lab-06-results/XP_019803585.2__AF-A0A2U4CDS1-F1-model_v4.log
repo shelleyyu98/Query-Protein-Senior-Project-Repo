@@ -1,0 +1,56 @@
+2025-10-02 22:34:11,099 INFO:main.py:240:print_splash_screen:PDB2PQR v3.6.1: biomolecular structure conversion software.
+2025-10-02 22:34:11,100 INFO:main.py:242:print_splash_screen:Please cite:  Jurrus E, et al.  Improvements to the APBS biomolecular solvation software suite.  Protein Sci 27 112-128 (2018).
+2025-10-02 22:34:11,100 INFO:main.py:242:print_splash_screen:Please cite:  Dolinsky TJ, et al.  PDB2PQR: expanding and upgrading automated preparation of biomolecular structures for molecular simulations. Nucleic Acids Res 35 W522-W525 (2007).
+2025-10-02 22:34:11,100 INFO:main.py:759:main_driver:Checking and transforming input arguments.
+2025-10-02 22:34:11,101 INFO:main.py:763:main_driver:Loading topology files.
+2025-10-02 22:34:11,162 INFO:main.py:765:main_driver:Loading molecule: XP_019803585.2__AF-A0A2U4CDS1-F1-model_v4.protein.pdb
+2025-10-02 22:34:11,162 ERROR:pdb.py:2584:read_pdb:Error parsing line: invalid literal for int() with base 10: 'TURTR'
+2025-10-02 22:34:11,162 ERROR:pdb.py:2585:read_pdb:<DBREF  XXXX A    1   738  UNP    A0A2U4CDS1 A0A2U4CDS1_TURTR     1    738>
+2025-10-02 22:34:11,162 ERROR:pdb.py:2586:read_pdb:Truncating remaining errors for record type:DBREF
+2025-10-02 22:34:11,190 WARNING:io.py:467:get_molecule:Warning: XP_019803585.2__AF-A0A2U4CDS1-F1-model_v4.protein.pdb is a non-standard PDB file.
+
+2025-10-02 22:34:11,190 ERROR:io.py:468:get_molecule:['DBREF']
+2025-10-02 22:34:11,190 INFO:main.py:768:main_driver:Dropping water from structure.
+2025-10-02 22:34:11,194 INFO:main.py:770:main_driver:Setting up molecule.
+2025-10-02 22:34:11,260 INFO:main.py:408:setup_molecule:Created biomolecule object with 738 residues and 5600 atoms.
+2025-10-02 22:34:11,261 INFO:main.py:774:main_driver:Setting termini states for biomolecule chains.
+2025-10-02 22:34:11,298 INFO:main.py:604:non_trivial:Loading forcefield.
+2025-10-02 22:34:11,307 INFO:main.py:608:non_trivial:Loading hydrogen topology definitions.
+2025-10-02 22:34:11,313 INFO:main.py:459:is_repairable:This biomolecule is clean.  No repair needed.
+2025-10-02 22:34:11,314 INFO:main.py:623:non_trivial:Updating disulfide bridges.
+2025-10-02 22:34:11,315 INFO:main.py:626:non_trivial:Debumping biomolecule.
+2025-10-02 22:34:11,480 INFO:main.py:649:non_trivial:Adding hydrogens to biomolecule.
+2025-10-02 22:34:12,060 INFO:main.py:652:non_trivial:Debumping biomolecule (again).
+2025-10-02 22:34:12,701 INFO:main.py:654:non_trivial:Optimizing hydrogen bonds
+2025-10-02 22:34:13,909 INFO:main.py:666:non_trivial:Applying force field to biomolecule states.
+2025-10-02 22:34:13,919 INFO:main.py:713:non_trivial:Regenerating headers.
+2025-10-02 22:34:13,922 INFO:main.py:738:non_trivial:Regenerating PDB lines.
+2025-10-02 22:34:13,975 WARNING:main.py:311:print_pqr:Ignoring 391 header lines in output.
+2025-10-02 22:59:21,115 INFO:main.py:240:print_splash_screen:PDB2PQR v3.6.1: biomolecular structure conversion software.
+2025-10-02 22:59:21,115 INFO:main.py:242:print_splash_screen:Please cite:  Jurrus E, et al.  Improvements to the APBS biomolecular solvation software suite.  Protein Sci 27 112-128 (2018).
+2025-10-02 22:59:21,115 INFO:main.py:242:print_splash_screen:Please cite:  Dolinsky TJ, et al.  PDB2PQR: expanding and upgrading automated preparation of biomolecular structures for molecular simulations. Nucleic Acids Res 35 W522-W525 (2007).
+2025-10-02 22:59:21,115 INFO:main.py:759:main_driver:Checking and transforming input arguments.
+2025-10-02 22:59:21,116 INFO:main.py:763:main_driver:Loading topology files.
+2025-10-02 22:59:21,162 INFO:main.py:765:main_driver:Loading molecule: XP_019803585.2__AF-A0A2U4CDS1-F1-model_v4.protein.pdb
+2025-10-02 22:59:21,163 ERROR:pdb.py:2584:read_pdb:Error parsing line: invalid literal for int() with base 10: 'TURTR'
+2025-10-02 22:59:21,163 ERROR:pdb.py:2585:read_pdb:<DBREF  XXXX A    1   738  UNP    A0A2U4CDS1 A0A2U4CDS1_TURTR     1    738>
+2025-10-02 22:59:21,163 ERROR:pdb.py:2586:read_pdb:Truncating remaining errors for record type:DBREF
+2025-10-02 22:59:21,184 WARNING:io.py:467:get_molecule:Warning: XP_019803585.2__AF-A0A2U4CDS1-F1-model_v4.protein.pdb is a non-standard PDB file.
+
+2025-10-02 22:59:21,184 ERROR:io.py:468:get_molecule:['DBREF']
+2025-10-02 22:59:21,185 INFO:main.py:768:main_driver:Dropping water from structure.
+2025-10-02 22:59:21,188 INFO:main.py:770:main_driver:Setting up molecule.
+2025-10-02 22:59:21,234 INFO:main.py:408:setup_molecule:Created biomolecule object with 738 residues and 5600 atoms.
+2025-10-02 22:59:21,235 INFO:main.py:774:main_driver:Setting termini states for biomolecule chains.
+2025-10-02 22:59:21,252 INFO:main.py:604:non_trivial:Loading forcefield.
+2025-10-02 22:59:21,259 INFO:main.py:608:non_trivial:Loading hydrogen topology definitions.
+2025-10-02 22:59:21,265 INFO:main.py:459:is_repairable:This biomolecule is clean.  No repair needed.
+2025-10-02 22:59:21,266 INFO:main.py:623:non_trivial:Updating disulfide bridges.
+2025-10-02 22:59:21,266 INFO:main.py:626:non_trivial:Debumping biomolecule.
+2025-10-02 22:59:21,420 INFO:main.py:649:non_trivial:Adding hydrogens to biomolecule.
+2025-10-02 22:59:22,083 INFO:main.py:652:non_trivial:Debumping biomolecule (again).
+2025-10-02 22:59:22,822 INFO:main.py:654:non_trivial:Optimizing hydrogen bonds
+2025-10-02 22:59:24,004 INFO:main.py:666:non_trivial:Applying force field to biomolecule states.
+2025-10-02 22:59:24,015 INFO:main.py:713:non_trivial:Regenerating headers.
+2025-10-02 22:59:24,018 INFO:main.py:738:non_trivial:Regenerating PDB lines.
+2025-10-02 22:59:24,069 WARNING:main.py:311:print_pqr:Ignoring 391 header lines in output.

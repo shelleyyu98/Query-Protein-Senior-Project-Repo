@@ -1,0 +1,1150 @@
+   21  cd fastq-files
+   22  fasterq-dump SRR1297272
+   23  fasterq-dump SRR1297281
+   24  less SRR1297281.fastq
+   25  fastqc SRR1297281.fastq
+   26  wkhtmltopdf  --print-media-type SRR1297281_fastqc.html SRR1297281_fastqc.pdf
+   27  java -jar ~/tools/trimmomatic.jar SE -phred33 SRR1297272.fastq SRR1297272.trimmed.fastq  LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+   28  java -jar ~/tools/trimmomatic.jar  SE -phred33 SRR1297281.fastq SRR1297281.trimmed.fastq  LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+   29  cd ~/lab10-s1-iberger/genome
+   30  pwd
+   31  cd ~/lab10-s1-iberger/genome
+   32  pwd
+   33  mv/lab10-key /lab10-s1-iberger
+   34  pwd
+   35  rename lab10-key
+   36  #mv
+   37  lab10-s1-iberger\
+   38  #mv
+   39  lab10-key
+   40  rename 's/lab10-key/lab10-s1-iberger'
+   41  sudo apt install rename
+   42  rename 's/^lab10-key$/lab10-s1-iberger/' lab10-s1-iberger
+   43  rename --help
+   44  -h
+   45  mv lab10-key lab10-s1-iberger
+   46  pwd
+   47  cd ~/home/bio312-user
+   48   ~/home/bio312-user
+   49  cd ~/bio312-user
+   50   ~/bio312-user
+   51  ~/bio312-user
+   52  cd ~/bio312-user
+   53  pwd
+   54  cd
+   55  pwd
+   56  mv lab10-key lab10-s1-iberger
+   57  ls
+   58  cd ~/lab10-s1-iberger
+   59  pwd
+   60  ls
+   61  mkdir lab03-dev
+   62  cd lab03-dev
+   63  ls
+   64  cd ../
+   65  cd lab03
+   66  ls
+   67  cd proteomes
+   68  ls
+   69  cd ../
+   70  ls
+   71  cd ../
+   72  cd lascreen -dRR
+   73  screen -dRR
+   74  cd proteomes
+   75  ls
+   76  pwd
+   77  ls
+   78  cd ../
+   79  ls
+   80  cd epas1
+   81  ls
+   82  cd ../
+   83  cd globins
+   84  ls
+   85  less globins.blastp.detail.filtered.out
+   86  ls
+   87  cd ../
+   88  ls
+   89  cd epas1
+   90  ls
+   91  less globins.blastp.detail.filtered.out
+   92  cd ../
+   93  ls
+   94  cd globins
+   95  ls
+   96  less globins.blastp.detail.out
+   97  cd ../
+   98  ls
+   99  mkdir allhuman
+  100  cd allhuman
+  101  nano blast_unique_orthogroups.sh
+  102  xchmod +x blast_unique_orthogroups.sh
+  103  chmod +x blast_unique_orthogroups.sh
+  104  bash blast_unique_orthogroups.sh 
+  105  ls
+  106  df
+  107  df -h
+  108  ls
+  109  cd blast_results/
+  110  ls
+  111  less all_vs_all.blastp.out 
+  112  ls -h
+  113  ls -lh
+  114  rm all_vs_all.blastp.out 
+  115  cd ../
+  116  ls
+  117  cd ../
+  118  ls
+  119  cd proteomes/
+  120  ls
+  121  seqkit grep -r -p "H.sapiens_CYGB_cytoglobin" H.sapiens.longest.renamed.faa 
+  122  sudo yum update
+  123  /usr/bin/dnf check-release-update
+  124  dnf upgrade
+  125  sudo dnf upgrade
+  126  sudo dnf update -y
+  127  sudo dnf upgrade -y
+  128  /usr/bin/dnf check-release-update
+  129  sudo dnf upgrade --releasever=2023.8.20250721 -y
+  130   dnf upgrade --releasever=2023.8.20250721
+  131  sudo  dnf upgrade --releasever=2023.8.20250721
+  132  df -h
+  133  ls
+  134  cd dat
+  135  cd datga
+  136  cd data
+  137  ls
+  138  cd ../
+  139  rm -rf lab12-s1-iberger/
+  140  rm -rf lab13-TheStellarScientist/
+  141  rm -rf lab13-s1-iberger/
+  142  rm -rf lab13-s4-kostil/
+  143  rm -rf lab13-s5-olivarahman/
+  144  ls
+  145  rm -rf *iberger*
+  146  ls
+  147  cd labs
+  148  ls
+  149  cd  lab09-
+  150  ls
+  151  cd ../
+  152  rm -rf labs
+  153  ls
+  154  df -h
+  155  sudo dnf upgrade --releasever=2023.8.20250721 -y
+  156  sudo reboot
+  157  ls
+  158  cd lab02
+  159  cd lab02-key
+  160  ls
+  161  ls
+  162  sudo sed -i 's/^#\?PasswordAuthentication .*/PasswordAuthentication yes/' /etc/ssh/sshd_config
+  163  sudo sed -i 's/^#\?ChallengeResponseAuthentication .*/ChallengeResponseAuthentication no/' /etc/ssh/sshd_config
+  164  sudo systemctl restart sshd
+  165  sudo sed -i 's/^#\?PasswordAuthentication .*/PasswordAuthentication yes/' /etc/ssh/sshd_config
+  166  sudo sed -i 's/^#\?ChallengeResponseAuthentication .*/ChallengeResponseAuthentication no/' /etc/ssh/sshd_config
+  167  sudo systemctl restart sshd
+  168  # allow SSH password auth
+  169  echo 'ssh_pwauth: true' | sudo tee /etc/cloud/cloud.cfg.d/99-ssh-pwauth.cfg
+  170  # don’t force password change on first boot
+  171  printf '%s\n' 'chpasswd:' '  expire: false' | sudo tee /etc/cloud/cloud.cfg.d/99-chpasswd.cfg
+  172  echo 'bio312-user:bio312isCOOL!' | sudo chpasswd
+  173  ls
+  174  cd aryl
+  175  ls
+  176  cd ../
+  177  ls
+  178  rm -rf aryl
+  179  cd igv
+  180  ls
+  181  cd genomes
+  182  ls
+  183  less user-defined-genomes.txt 
+  184  cd ../
+  185  cd igv
+  186  ls
+  187  less igv0.log 
+  188  less prefs.properties 
+  189  cd ../
+  190  rm -rf key
+  191  ls
+  192  cd data
+  193  ls
+  194  less animal.txt
+  195  cat >animal.txt
+  196  less animal.txt
+  197  ls
+  198  cd Pfam
+  199  ls
+  200  cd ../
+  201  ls
+  202  cd ../
+  203  ls
+  204  cd igv
+  205  ls
+  206  cd genomes/
+  207  ls
+  208  cd ../
+  209  rm -rf igv
+  210  ls
+  211  less workspace.code-workspace 
+  212  rm workspace.code-workspace 
+  213  ls
+  214  pwd
+  215  cd ../
+  216  ls
+  217  cd iberger
+  218  sudo deluser --remove-home iberger
+  219  sudo userdel -r iberger
+  220  ls
+  221  cd ec2-user/
+  222  ls
+  223  cd bio312-user/
+  224  ls
+  225  cd tools
+  226  ls
+  227  cd RANGER-DTL_RecPhyloXML/
+  228  ls
+  229  cd ../
+  230  rm RANGER-DTL_RecPhyloXML.zip
+  231  ls
+  232  cd ../
+  233  ls
+  234  cd miniforge3/
+  235  ls
+  236  cd ../
+  237  ls
+  238  rm -rf lab*
+  239  ls
+  240  df -h
+  241  ls
+  242  mamba install -c conda-forge -c salilab dssp -y 
+  243  muscle
+  244  which muscle
+  245  cd /usr/bin
+  246  curl -L -o USalign https://zhanggroup.org/US-align/download/USalign
+  247  sudo curl -L -o USalign https://zhanggroup.org/US-align/download/USalign
+  248  ls USalign 
+  249  .USalign
+  250  cd USalign
+  251  USalign
+  252  chmod +x USalign
+  253  sudo chmod +x USalign
+  254  USalign
+  255  rm USalign 
+  256  sudo rm USalign 
+  257  cd
+  258  wget https://zhanggroup.org/US-align/bin/module/USalignLinux64.zip
+  259  unzip USalignLinux64.zip 
+  260  ls
+  261  cd USalign/
+  262  ls
+  263  g++ -static -O3 -ffast-math -o USalign USalign.cpp
+  264  sudo dnf groupinstall "Development Tools"
+  265  g++ -O3 -ffast-math -o USalign USalign.cpp
+  266  ls
+  267  ./USalign
+  268  sudo mv USalign /usr/bin/.
+  269  chmod +x /usr/bin/USalign
+  270  cd 
+  271  USalign
+  272  ls
+  273  rm -rf USalign
+  274  rm *.zip
+  275  ls
+  276  cd miniforge3/
+  277  ls
+  278  cd pkgs
+  279  ls
+  280  dssp
+  281  cd ../
+  282  wget https://zhanggroup.org/TM-align/TMalign.cpp
+  283  ls
+  284  g++ -O3 -ffast-math -lm -o TMalign TMalign.cpp
+  285  ./TMalign 
+  286  sudo cp TMalign /usr/bin/.
+  287  chmod +x /usr/bin/TMalign
+  288  sudo chmod +x /usr/bin/TMalign
+  289  TMalign
+  290  ls
+  291  rm -rf TMalign
+  292  rm TMalign.cpp 
+  293  ls
+  294  screen 
+  295  mamba create -n bio312 -c conda-forge -c bioconda   python=3.11 biopython gemmi pdbfixer pdb-tools   mdtraj prody nglview py3Dmol   mafft muscle mmseqs2   foldseek   openjdk=17 graphviz   pandas numpy matplotlib -y
+  296  mamba install -n bio312 -c conda-forge -c salilab dssp -y  # package 'dssp' provides mkdssp
+  297  foldseek
+  298  conda activate bio312
+  299  foldseek
+  300  USalign
+  301  TMalign
+  302  mkdssp
+  303  conda deactivate bio312
+  304  conda deactivate
+  305  R --vanilla
+  306  sudo R --vanilla
+  307  ls()
+  308  ls
+  309  cd data
+  310  ls
+  311  cd ../
+  312  ls
+  313  cd data
+  314  ls
+  315  cd ../
+  316  ls
+  317  cd tools
+  318  ls
+  319  cd ../
+  320  ls
+  321  jupyter lab 
+  322  module load bio312
+  323  conda load bio312
+  324  conda activate bio312
+  325  jupyter lab
+  326  python -m pip show py3Dmol
+  327  conda list py3Dmol
+  328  ls
+  329  git config --global --unset credential.helper 2>/dev/null || true
+  330  sudo git config --system --unset credential.helper 2>/dev/null || true
+  331  rm -f ~/.git-credentials
+  332  sudo rm -f /etc/git-credentials
+  333  git credential reject <<EOF
+  334  protocol=https
+  335  host=github.com
+  336  EOF
+  337  git clone https://github.com/Bio312/lab02-key
+  338  ls
+  339  filterGFF
+  340  which filterGFF
+  341  sudo cat >/usr/local/bin/filterGFF_gene_tx.sh
+  342  ls
+  343  cat >filterGFF_gene_tx.sh
+  344  ls
+  345  which filterGFF
+  346  sudo mv filterGFF_gene_tx.sh /usr/local/bin/filterGFF_gene_tx
+  347  sudo chmod +x /usr/local/bin/filterGFF_gene_tx 
+  348  filterGFF_gene_tx
+  349  ls
+  350  git config --global user.name "Shelley Yu"
+  351  git config --global user.email "shelley.yu@stonybrook.edu"
+  352  ssh-keygen -t ed25519 -C "shelley.yu@stonybrook.edu"
+  353  eval "$(ssh-agent -s)"
+  354  ssh-add ~/.ssh/id_ed25519
+  355  cat ~/.ssh/id_ed25519.pub
+  356  ssh -T git@github.com
+  357  git clone git@github.com:Bio312/lab02-s5-syu.git
+  358  cd lab02-s5-syu
+  359  git remote set-url origin git@github.com:Bio312/lab02-s5-syu.git
+  360  1s
+  361  ls
+  362  MYGIT="s5-syu"
+  363  echo $MYGIT
+  364  echo my git username is $MYGIT
+  365  echo "export MYGIT=$MYGIT" >> ~/.bashrc
+  366  cd ~/lab02-$MYGIT
+  367  ls
+  368  ncbi-acc-download -h
+  369  ncbi-acc-download -F genbank "NC_000022.11"
+  370  ls
+  371  less NC_000022.11.gbk
+  372  ncbi-acc-download -F fasta "NC_000022.11"
+  373  ncbi-acc-download -F gff3 "NC_000022.11"
+  374  ls
+  375  ncbi-acc-download -F gff3 "NC_000022.11"
+  376  filterGFF_gene_tx MB NC_000022.11.gff 4
+  377  gt gff3 -sort -tidy -force -o MB.sorted.gff MB.X4.gff
+  378  gt stat -genelengthdistri -exonlengthdistri -intronlengthdistri -cdslengthdistri   -addintrons -force -o MB.sorted.counts.gff MB.sorted.gff
+  379  less MB.sorted.counts.gff
+  380  gt gff3 -sort -tidy -o NC_000022.11.sorted.gff NC_000022.11.gff
+  381  gt stat -genelengthdistri -exonlengthdistri -intronlengthdistri -cdslengthdistri -addintrons -force -o NC_000022.11.counts.txt NC_000022.11.sorted.gff
+  382  less NC_000022.11.counts.txt
+  383  bedtools getfasta -s -fi NC_000022.11.fa -fo MB.X4.cds.fa -bed MB.X4.cds.gff
+  384  less MB.X4.cds.fa
+  385  union MB.X4.cds.fa -outseq MB.X4.cds.union.fa
+  386  transeq MB.X4.cds.union.fa MB.X4.protein.fa
+  387  less MB.X4.protein.fa
+  388  union MB.X4.cds.fa -outseq MB.X4.cds.union.fa
+  389  transeq MB.X4.cds.union.fa MB.X4.protein.fa
+  390  less MB.X4.protein.fa
+  391  history > lab2.commandhistory.txt
+  392  tail -n 20 lab2.commandhistory.txt
+  393  git status
+  394  # Append paths of files >5MB to .gitignore (strip leading ./)
+  395  find . -size +5M | sed 's|^\./||' >> .gitignore
+  396  # De-duplicate .gitignore and remove empty lines (write changes back)
+  397  awk 'NF && !seen[$0]++' .gitignore > .gitignore.tmp && mv .gitignore.tmp .gitignore
+  398  git add .
+  399  git status
+  400  git commit -m "Add lab 2 work: command history, analysis outputs, notes"
+  401  git status
+  402  git pull --rebase --autostash
+  403  git status
+  404  git push
+  405  git status
+  406  echo 'Hello World'
+  407   echo "”.devlove ,gnieb era dna ,neeb evah lufrednow tsom dna lufituaeb tsom smrof sseldne gninnigeb a elpmis os morf ,ytivarg fo wal dexif eht ot gnidrocca no gnilcyc enog sah tenalp siht tslihw ,taht dna ;eno otni ro smrof wef a otni dehtaerb yllanigiro neeb gnivah ,srewop lareves sti htiw ,efil fo weiv siht ni ruednarg si erehT“" | rev
+  408  cd
+  409  pwd
+  410  cd data
+  411  ls
+  412  cat animal.txt
+  413  cd
+  414  ls -l
+  415  df
+  416  df -h
+  417  git clone git@github.com:Bio312/lab03-$MYGIT.git
+  418  cd lab03-s5-syu
+  419  ls
+  420  pwd
+  421  ls
+  422  9739 9763 9913 9708 9704 9644 9669 9771 9785 9606 9796 9925 9615 185453 28377 7957 7897
+  423  cd ~/lab03-s5-syu
+  424  gunzip ~/lab03-$MYGIT/proteomes/*.gz
+  425  cat  ~/lab03-$MYGIT/proteomes/*.faa > ~/lab03-$MYGIT/allprotein.fas
+  426  makeblastdb -in ~/lab03-$MYGIT/allprotein.fas -dbtype prot
+  427  mkdir ~/lab03-$MYGIT/myoglobin
+  428  mkdir ~/lab03-s5-syu/myoglobin
+  429  cd ~/lab03-$MYGIT/myoglobin
+  430  pwd
+  431  samtools faidx ~/lab03-$MYGIT/allprotein.fas 'Hsap|NP_001349775.1|MB'
+  432  samtools faidx ~/lab03-$MYGIT/allprotein.fas 'Hsap|NP_001349775.1|MB' > ~/lab03-$MYGIT/myoglobin/NP_001349775.1.fa
+  433  less NP_001349775.1.fa
+  434  ls NP_001349775.1.fa
+  435  less NP_001349775.1.fa
+  436  ls NP_001349775.1.fa
+  437  blastp -db ~/lab03-$MYGIT/allprotein.fas -query ~/lab03-$MYGIT/myoglobin/NP_001349775.1.fa -outfmt 0 -max_hsps 1 -out ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.typical.out
+  438  blastp -db ~/lab03-$MYGIT/allprotein.fas -query ~/lab03-$MYGIT/myoglobin/NP_001349775.1.fa -outfmt "6 sseqid pident length mismatch gapopen evalue bitscore pident stitle" -max_hsps 1 -out ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.out
+  439  grep -c Hsap ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.out
+  440  grep Hsap ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.out
+  441  awk '{if ($6< 1e-30)print $1 }' ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.out > ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.filtered.out
+  442  ><img src="img/brightspace.png" alt= “” width="20" height="20">
+  443  <img src="img/brightspace.png" alt= “” width="20" height="20">
+  444  wc -l ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.filtered.out
+  445  cut -d '|' -f 1 ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.filtered.out | sort | uniq -c
+  446  find . -size +5M | sed 's|^\./||' >> .gitignore
+  447  awk 'NF && !seen[$0]++' .gitignore > .gitignore.tmp && mv .gitignore.tmp .gitignore
+  448  git add .
+  449  git commit -m "Finished working on myoglobin; adding blast output, etc."
+  450  git pull --rebase --autostash
+  451  git status
+  452  git pull --rebase --autostash
+  453  git commit -m "Finished working on myoglobin; adding blast output, etc."
+  454  find . -size +5M | sed 's|^\./||' >> .gitignore
+  455  cd ..
+  456  status
+  457  git status
+  458  find . -size +5M | sed 's|^\./||' >> .gitignore
+  459  awk 'NF && !seen[$0]++' .gitignore > .gitignore.tmp && mv .gitignore.tmp .gitignore
+  460  git add .
+  461  git commit -m "Finished working on myoglobin; adding blast output, etc."
+  462  git pull --rebase --autostash
+  463  git status
+  464  git push
+  465  mkdir ~/lab03-$MYGIT/SPTY2D1
+  466  cd ~/lab03-$MYGIT/SPTY2D1 
+  467  pwd
+  468  cd ~/lab03-$MYGIT/SPTY2D1
+  469  pwd
+  470  samtools faidx ~/lab03-$MYGIT/allprotein.fas 'Hsap|NP_919261.2|SPTY2D1
+  471  cd ~/lab03-$MYGIT/SPTY2D1
+  472  [bio312-user@ip-172-31-18-224 SPTY2D1]$
+  473  pwd
+  474  cd..
+  475  samtools faidx ~/lab03-$MYGIT/allprotein.fas 'Hsap|NP_919261.2|SPTY2D1
+  476  '
+  477  samtools faidx ~/lab03-$MYGIT/allprotein.fas 'Hsap|NP_919261.2|SPTY2D1'
+  478  samtools faidx ~/lab03-$MYGIT/allprotein.fas 'Hsap|NP_919261.2|SPTY2D1' > ~/lab03-$MYGIT/SPTY2D1/NP_001349775.1.fa
+  479  less NP_001349775.1.fa
+  480  ls NP_001349775.1.fa
+  481  blastp -db ~/lab03-$MYGIT/allprotein.fas -query ~/lab03-$MYGIT/SPY2D1/NP_001349775.1.fa -outfmt 0 -max_hsps 1 -out ~/lab03-$MYGIT/SPY2D1/.blastp.typical.out
+  482  blastp -db ~/lab03-$MYGIT/allprotein.fas -SPY2D1 ~/lab03-$MYGIT/SPY2D1/NP_001349775.1.fa -outfmt 0 -max_hsps 1 -out ~/lab03-$MYGIT/SPY2D1/.blastp.typical.out
+  483  blastp -db ~/lab03-$MYGIT/allprotein.fas -query ~/lab03-$MYGIT/myoglobin/NP_919261.2.1.fa -outfmt 0 -max_hsps 1 -out ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.typical.out
+  484  samtools faidx ~/lab03-$MYGIT/allprotein.fas 'Hsap|NP_919261.2|SPTY2D1' > ~/lab03-$MYGIT/SPTY2D1/NP_919261.2.fa
+  485  less NP_919261.2.fa
+  486  ls NP_919261.2.fa
+  487  blastp -db ~/lab03-$MYGIT/allprotein.fas -query ~/lab03-$MYGIT/myoglobin/NP_919261.2.fa -outfmt 0 -max_hsps 1 -out ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.typical.out
+  488  pwd
+  489  cd ~/lab03-$MYGIT/SPTY2D1
+  490  samtools faidx ~/lab03-$MYGIT/allprotein.fas 'Hsap|NP_919261.2|MB'
+  491  cd ~/lab03-$MYGIT/SPTY2D1
+  492  samtools faidx ~/lab03-$MYGIT/allprotein.fas 'Hsap|NP_919261.2|SPTY2D1'
+  493  samtools faidx ~/lab03-$MYGIT/allprotein.fas 'Hsap|NP_919261.2|SPTY2D1' > ~/lab03-$MYGIT/SPTY2D1/NP_919261.2.1.fa
+  494  less NP_919261.2.1.fa
+  495  ls NP_919261.2.1.fa
+  496  blastp -db ~/lab03-$MYGIT/allprotein.fas -query ~/lab03-$MYGIT/SPTY2D1/NP_919261.2.1.fa -outfmt 0 -max_hsps 1 -out ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.typical.out
+  497  pwd
+  498  blastp -db ~/lab03-$MYGIT/allprotein.fas -query ~/lab03-$MYGIT/SPTY2D1/NP_919261.2.1.fa -outfmt "6 sseqid pident length mismatch gapopen evalue bitscore pident stitle" -max_hsps 1 -out ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.out
+  499  grep -c Hsap ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.out
+  500  grep Hsap ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.out
+  501  awk '{if ($6< 1e-30)print $1 }' ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.out > ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.filtered.out
+  502  cut -d '|' -f 1 ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.filtered.out | sort | uniq -c
+  503  awk '{if ($6< 1e-30)print $1 }' ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.out > ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.filtered.out
+  504  awk '{if ($6< 1e-30)print $1 }' ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.out > ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.filtered.out
+  505  wc -l ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.filtered.out
+  506  cd ~/lab03-$MYGIT/myoglobin
+  507  pwd
+  508  cut -d '|' -f 1 ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.filtered.out | sort | uniq -c
+  509  cut -f1 SPTY2D1.blastp.detail.filtered.out | cut -d'|' -f1 | sort | uniq -c
+  510   cd ~/lab03-$MYGIT/SPTY2D1
+  511  awk '$7 <= 1e-30' SPTY2D1.blastp.detail.out > SPTY2D1.blastp.detail.filtered.out
+  512  cut -f1 SPTY2D1.blastp.detail.filtered.out | cut -d'|' -f1 | sort | uniq -c
+  513  cd ~/lab03-$MYGIT/SPTY2D1
+  514  pwd
+  515  awk '{if ($6< 1e-30)print $1 }' ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.out > ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.filtered.out
+  516  pwc
+  517  pwd
+  518  awk '{if ($6< 1e-30)print $1 }' ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.out > ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.filtered.out
+  519  wc -l ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.filtered.out
+  520  awk '$7 <= 1e-30 {print $1}' ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.out   | cut -d'|' -f1   | sort | uniq -c
+  521  awk '$7 <= 1e-30 {print $1}' ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.out \ | cut -d'|' -f1 \ | sort | uniq -c
+  522  cd ~/lab03-$MYGIT
+  523  history > ~/lab03-$MYGIT/lab3.commandhistory.txt
+  524  find . -size +5M | sed 's|^\./||' >> .gitignore
+  525  awk 'NF && !seen[$0]++' .gitignore > .gitignore.tmp && mv .gitignore.tmp .gitignore
+  526  git add .
+  527  git commit -m "Add lab 3 work: blast output, etc."
+  528  git pull --rebase --autostash
+  529  git status
+  530  git push
+  531  git clone git@github.com:Bio312/lab04-$MYGIT.git
+  532  cd lab04-$MYGIT
+  533  ls
+  534  git clone git@github.com:Bio312/lab04-$MYGIT.git
+  535  cd lab04-$MYGIT
+  536  ls
+  537  nano ~/lab04-$MYGIT/toy.fas 
+  538  muscle -align ~/lab04-$MYGIT/toy.fas -output ~/lab04-$MYGIT/toy.al.fas
+  539  alv -kli  ~/lab04-$MYGIT/toy.al.fas 
+  540  t_coffee -other_pg seq_reformat -in ~/lab04-$MYGIT/toy.al.fas -output sim
+  541  alignbuddy -pi ~/lab04-$MYGIT/toy.al.fas
+  542   alignbuddy -pi ~/lab04-$MYGIT/toy.al.fas | awk ' (NR>2)  { for (i=2;i<=NF  ;i++){ sum+=$i;num++} }
+  543       END{ print(100*sum/num) } '
+  544  cd ~/lab03-$MYGIT/myoglobin
+  545  grep -c Hsap ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.out
+  546  	
+  547  ~/lab03-$MYGIT/allprotein.fas
+  548  	
+  549  ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.filtered.out
+  550  pwd
+  551  /home/bio312-user/lab03-s5-syu/myoglobin
+  552  /home/bio312-user/lab03-s5-syu
+  553  cd ~/lab03-$MYGIT/
+  554  cd ~/lab04-$MYGIT/
+  555  pwd
+  556  mkdir ~/lab04-$MYGIT/myoglobin
+  557  cd ~/lab04-$MYGIT/myoglobin
+  558  pwd
+  559  seqkit grep --pattern-file ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.filtered.out ~/lab03-$MYGIT/allprotein.fas | seqkit grep -v -p "carpio" > ~/lab04-$MYGIT/myoglobin/myoglobin.homologs.fas
+  560  less
+  561  less myoglobin.homologs.fas
+  562  muscle -align ~/lab04-$MYGIT/myoglobin/myoglobin.homologs.fas -output ~/lab04-$MYGIT/myoglobin/myoglobin.homologs.al.fas
+  563  alv -kli  ~/lab04-$MYGIT/myoglobin/myoglobin.homologs.al.fas | less -RS
+  564  alv -kli --majority ~/lab04-$MYGIT/myoglobin/myoglobin.homologs.al.fas | less -RS
+  565   Rscript --vanilla ~/lab04-$MYGIT/plotMSA.R  ~/lab04-$MYGIT/myoglobin/myoglobin.homologs.al.fas
+  566  pwd
+  567  alignbuddy  -al  ~/lab04-$MYGIT/myoglobin/myoglobin.homologs.al.fas
+  568  alignbuddy -trm all  ~/lab04-$MYGIT/myoglobin/myoglobin.homologs.al.fas | alignbuddy  -al
+  569  alignbuddy -dinv 'ambig' ~/lab04-$MYGIT/myoglobin/myoglobin.homologs.al.fas | alignbuddy  -al
+  570  t_coffee -other_pg seq_reformat -in ~/lab04-$MYGIT/myoglobin/myoglobin.homologs.al.fas -output sim
+  571   alignbuddy -pi ~/lab04-$MYGIT/myoglobin/myoglobin.homologs.al.fas | awk ' (NR>2)  { for (i=2;i<=NF  ;i++){ sum+=$i;num++} }
+  572       END{ print(100*sum/num) } '
+  573  mkdir ~/lab04-$MYGIT/SPTY2D1
+  574  cd ~/lab04-$MYGIT/SPTY2D1
+  575  pwd
+  576  seqkit grep --pattern-file ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.filtered.out ~/lab03-$MYGIT/allprotein.fas | seqkit grep -v -p "carpio" > ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.fas
+  577  muscle -align ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.fas -output ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.fas
+  578  alv -kli  ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.fas | less -RS
+  579  alv -kli --majority ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.fas | less -RS
+  580   Rscript --vanilla ~/lab04-$MYGIT/plotMSA.R  ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.fas
+  581  alv -kli  ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.fas | less -RS
+  582  alignbuddy  -al  ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.fas
+  583  alignbuddy -trm all  ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.fas | alignbuddy  -al
+  584  t_coffee -other_pg seq_reformat -in ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.fas -output sim
+  585  alignbuddy -dinv 'ambig' ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.fas | alignbuddy  -al
+  586  t_coffee -other_pg seq_reformat -in ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.fas -output sim
+  587   alignbuddy -pi ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.fas | awk ' (NR>2)  { for (i=2;i<=NF  ;i++){ sum+=$i;num++} }
+  588       END{ print(100*sum/num) } '
+  589  history > lab4.commandhistory.txt
+  590  cd ~/lab04-$MYGIT
+  591  find . -size +5M | sed 's|^\./||g' | cat >> .gitignore; awk '!NF || !seen[$0]++' .gitignore
+  592  git add .
+  593  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  594  git pull --rebase=false --no-edit
+  595  git push 
+  596  git clone git@github.com:Bio312/lab05-$MYGIT.git
+  597  cd lab05-$MYGIT
+  598  ls
+  599  pwd
+  600  echo "((You,your_sister),(your_cousin,your_other_cousin));" > ~/lab05-$MYGIT/family.tre
+  601  ((You,your_sister)your_parents,(your_cousin,your_other_cousin)your_aunt$uncle)your_grandparents;
+  602  nw_display ~/lab05-$MYGIT/family.tre 
+  603  nw_display -s ~/lab05-$MYGIT/family.tre | convert svg:-  ~/lab05-$MYGIT/family.tre.pdf
+  604  Rscript --vanilla ~/lab05-$MYGIT/plotUnrooted.R  ~/lab05-$MYGIT/family.tre ~/lab05-$MYGIT/family.unrooted.pdf 1 35
+  605  echo "((Me,my_oldest_sister,my_middle_sister,my,younger_brother,my_youngest_brother),(my_younger_cousin,my_older_cousin));" > ~/lab05-$MYGIT/family.tre
+  606  nw_display -s ~/lab05-$MYGIT/family.tre | convert svg:-  ~/lab05-$MYGIT/family.tre.pdf
+  607  echo "((Me,my_oldest_sister,my_middle_sister,my,younger_bro
+  608  ther,my_youngest_brother),(my_younger_cousin,my_older_cousin));" > ~/lab05-$MYGIT/myfamily.tre
+  609   nw_display -s ~/lab05-$MYGIT/family.tre | convert svg:-  ~/lab05-$MYGIT/myfamily.tre.pdf
+  610  nw_display -s ~/lab05-$MYGIT/family.tre | convert svg:-  ~/lab05-$MYGIT/myfamily.tre.pdf
+  611  echo "((You,your_sister),(your_cousin,your_other_cousin));" > ~/lab05-$MYGIT/family.tre
+  612  nw_display ~/lab05-$MYGIT/family.tre 
+  613  nw_display -s ~/lab05-$MYGIT/family.tre | convert svg:-  ~/lab05-$MYGIT/family.tre.pdf
+  614  nw_display ~/lab05-$MYGIT/myfamily.tre 
+  615  pwd
+  616  ls
+  617  nw_display ~/lab05-$MYGIT/myfamily.tre 
+  618   nw_display -s ~/lab05-$MYGIT/family.tre | convert svg:-  ~/lab05-$MYGIT/family.tre.pdf
+  619  nw_display -s ~/lab05-$MYGIT/family.tre | convert svg:-  ~/lab05-$MYGIT/myfamily.tre.pdf
+  620  Rscript --vanilla ~/lab05-$MYGIT/plotUnrooted.R  ~/lab05-$MYGIT/myfamily.tre ~/lab05-$MYGIT/family.unrooted.pdf 1 35
+  621  Rscript --vanilla ~/lab05-$MYGIT/plotUnrooted.R  ~/lab05-$MYGIT/family.tre ~/lab05-$MYGIT/family.unrooted.pdf 1 35
+  622  nw_display -s ~/lab05-$MYGIT/myfamily.tre | convert svg:-  ~/lab05-$MYGIT/myfamily.tre.pdf
+  623  Rscript --vanilla ~/lab05-$MYGIT/plotUnrooted.R  ~/lab05-$MYGIT/myfamily.tre ~/lab05-$MYGIT/myfamily.unrooted.pdf 1 35
+  624  echo "(Carassius_auratus,
+  625   (Latimeria_chalumnae,
+  626    (Anolis_carolinensis,
+  627     (((Canis_lupus_familiaris,
+  628         (Ursus_arctos,(Mustela_putorius_furo,(Odobenus_rosmarus,Zalophus_californianus)))),
+  629        (Equus_caballus,((Bos_taurus,Capra_hircus),(Tursiops_truncatus,(Balaenoptera_musculus,Eschrichtius_robustus))))),
+  630       Homo_sapiens),
+  631      (Loxodonta_africana,Chrysochloris_asiatica))))
+  632  ;" > ~/lab05-$MYGIT/species.tre
+  633  nw_display ~/lab05-$MYGIT/species.tre
+  634  nw_display -s ~/lab05-$MYGIT/species.tre | convert svg:- ~/lab05-$MYGIT/species.tre.pdf
+  635  Rscript --vanilla ~/lab05-$MYGIT/plotUnrooted.R  ~/lab05-$MYGIT/species.tre ~/lab05-$MYGIT/species.unrooted.pdf 0.4 35
+  636  echo "(Caur,
+  637   (Lcha,
+  638    (Acar,
+  639     (((Clup,
+  640         (Uarc,(Mfur,(Oros,Zcal)))),
+  641        (Ecab,((Btau,Chir),(Ttru,(Tman,Bacu))))),
+  642       Hsap),
+  643      (Lafr,Casa))))
+  644  ;" > ~/lab05-$MYGIT/species_abr.tre
+  645  nw_display -s ~/lab05-$MYGIT/species_abr.tre  -W 12  | convert svg:- ~/lab05-$MYGIT/species_abr.tre.pdf
+  646  pwd
+  647  cd
+  648  pwd
+  649  ls
+  650  echo "((You,your_sister),(your_cousin,your_other_cousin));" > ~/lab05-$MYGIT/family.tre
+  651  cd lab05-$MYGIT
+  652  pwd
+  653  echo "((You,your_sister),(your_cousin,your_other_cousin));" > ~/lab05-$MYGIT/family.tre
+  654  mkdir ~/lab05-$MYGIT/myoglobin
+  655  cd ~/lab05-$MYGIT/myoglobin  
+  656  iqtree -s ~/lab04-$MYGIT/myoglobin/myoglobin.homologs.al.fas -bb 1000 -nt 2  -pre ~/lab05-$MYGIT/myoglobin/myoglobin
+  657  nw_display ~/lab05-$MYGIT/myoglobin/myoglobin.treefile
+  658  Rscript --vanilla ~/lab05-$MYGIT/plotUnrooted.R  ~/lab05-$MYGIT/myoglobin/myoglobin.treefile ~/lab05-$MYGIT/myoglobin/myoglobin.treefile.pdf 0.4 15
+  659  gotree reroot midpoint -i ~/lab05-$MYGIT/myoglobin/myoglobin.treefile -o ~/lab05-$MYGIT/myoglobin/myoglobin.homologs.al.mid.treefile
+  660  nw_order -c n ~/lab05-$MYGIT/myoglobin/myoglobin.homologs.al.mid.treefile  | nw_display -
+  661  nw_order -c n ~/lab05-$MYGIT/myoglobin/myoglobin.homologs.al.mid.treefile | nw_display -s -w 1000 -l 'font-size:10px;font-family:sans' -i 'font-size:8px;font-family:sans' -b 'visibility:hidden' -I l -n -4 -W 4.0 -v 24 - | convert -density 300 svg:- ~/lab05-$MYGIT/myoglobin/myoglobin.homologs.al.mid.treefile.pdf
+  662  nw_order -c n ~/lab05-$MYGIT/myoglobin/myoglobin.homologs.al.mid.treefile | nw_topology - | nw_display -s -w 1000 -l 'font-size:10px;font-family:sans' -i 'font-size:8px;font-family:sans' -b 'visibility:hidden' -S -I l -n -4 -W 4.0 -v 24 - | convert -density 300 svg:- ~/lab05-$MYGIT/myoglobin/myoglobin.homologs.al.mid.cladogram.pdf
+  663  nw_reroot ~/lab05-$MYGIT/myoglobin/myoglobin.treefile "Caur|XP_026073056.1|LOC113052789" "Caur|XP_026102498.1|LOC113074004" -l >~/lab05-$MYGIT/myoglobin/myoglobin.outgroup.treefile
+  664  nw_order -c n ~/lab05-$MYGIT/myoglobin/myoglobin.outgroup.treefile | nw_display -s -w 1000 -l 'font-size:10px;font-family:sans' -i 'font-size:8px;font-family:sans' -b 'visibility:hidden' -I l -n -4 -W 4.0 -v 24 - | convert -density 300 svg:- ~/lab05-$MYGIT/myoglobin/myoglobin.outgroup.treefile.pdf
+  665  pwd
+  666  ls
+  667  pwd
+  668  mkdir ~/lab05-$MYGIT/SPTY2D1 
+  669  cd ~/lab05-$MYGIT/SPTY2D1 
+  670  pwd
+  671  nw_display ~/lab05-$MYGIT/SPTY2D1/SPTY2D1 .treefile
+  672  iqtree -s ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.fas -bb 1000 -nt 2  -pre ~/lab05-$MYGIT/SPTY2D1/SPTY2D1 
+  673  nw_display ~/lab05-$MYGIT/SPTY2D1/SPTY2D1.treefile
+  674  Rscript --vanilla ~/lab05-$MYGIT/plotUnrooted.R  ~/lab05-$MYGIT/SPTY2D1/SPTY2D1.treefile ~/lab05-$MYGIT/SPTY2D1/SPTY2D1.treefile.pdf 0.4 15
+  675  gotree reroot midpoint -i ~/lab05-$MYGIT/SPTY2D1/SPTY2D1.treefile -o ~/lab05-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.mid.treefile
+  676  nw_order -c n ~/lab05-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.mid.treefile  | nw_display -
+  677  nw_order -c n ~/lab05-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.mid.treefile | nw_display -s -w 1000 -l 'font-size:10px;font-family:sans' -i 'font-size:8px;font-family:sans' -b 'visibility:hidden' -I l -n -4 -W 4.0 -v 24 - | convert -density 300 svg:- ~/lab05-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.mid.treefile.pdf
+  678  nw_order -c n ~/lab05-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.mid.treefile | nw_topology - | nw_display -s -w 1000 -l 'font-size:10px;font-family:sans' -i 'font-size:8px;font-family:sans' -b 'visibility:hidden' -S -I l -n -4 -W 4.0 -v 24 - | convert -density 300 svg:- ~/lab05-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.mid.cladogram.pdf
+  679  cd ~/lab05-$MYGIT
+  680  find . -size +5M | sed 's|^\./||g' | cat >> .gitignore; awk '!NF || !seen[$0]++' .gitignore
+  681  git add .
+  682  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  683  git pull --no-edit
+  684  git push 
+  685  pwd
+  686  cd ~/lab05-$MYGIT
+  687  find . -size +5M | sed 's|^\./||g' | cat >> .gitignore; awk '!NF || !seen[$0]++' .gitignore
+  688  git add .
+  689  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  690  git pull --no-edit
+  691  git push 
+  692  history > lab5.commandhistory.txt
+  693  cd ~/lab05-$MYGIT
+  694  find . -size +5M | sed 's|^\./||g' | cat >> .gitignore; awk '!NF || !seen[$0]++' .gitignore
+  695  git add .
+  696  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  697  git pull --no-edit
+  698  git pull --rebase --autostash
+  699  git push
+  700  less ~/lab06-$MYGIT/myoglobin/XP_068416897.1__AF-P02177-F1-model_v4.pdb
+  701  mamba activate bio312
+  702  mamba install -y -c conda-forge pdb2pqr
+  703  #!/usr/bin/env bash
+  704  set -euo pipefail
+  705  PH=${PH:-6.5}  # allow overriding with: PH=7.0 ./script.sh
+  706  for pdb in *.pdb; do
+  707    [[ "$pdb" == *.protein.pdb ]] && continue;    base="${pdb%.pdb}"                                  # e.g., XP_...-model_v4
+  708    prot="${base}.protein.pdb"                           # protein-only PDB
+  709    pqr="${base}.pqr"                                    # output PQR
+  710    pdb_delhetatm "$pdb" > "$prot"; 
+  711    pdb2pqr --ff=AMBER --with-ph="$PH" --drop-water --keep-chain "$prot" "$pqr"     > "${base}.pdb2pqr.log" 2>&1; 
+  712    Z=$(awk '$1=="ATOM"||$1=="HETATM"{s+=$9} END{printf "%.3f", s}' "$pqr");    printf "%-40s pH=%s  Z=%s\n" "$base" "$PH" "$Z"; done
+  713  #!/usr/bin/env bash
+  714  set -euo pipefail
+  715  PH=${PH:-6.5}  # allow overriding with: PH=7.0 ./script.sh
+  716  for pdb in *.pdb; do
+  717    [[ "$pdb" == *.protein.pdb ]] && continue;    base="${pdb%.pdb}"                                  # e.g., XP_...-model_v4
+  718    prot="${base}.protein.pdb"                           # protein-only PDB
+  719    pqr="${base}.pqr"                                    # output PQR
+  720    pdb_delhetatm "$pdb" > "$prot"; 
+  721    pdb2pqr --ff=AMBER --with-ph="$PH" --drop-water --keep-chain "$prot" "$pqr"     > "${base}.pdb2pqr.log" 2>&1; 
+  722    Z=$(awk '$1=="ATOM"||$1=="HETATM"{s+=$9} END{printf "%.3f", s}' "$pqr");    printf "%-40s pH=%s  Z=%s\n" "$base" "$PH" "$Z"; done
+  723  echo; echo "Original PDB: $(ls ~/lab06-$MYGIT/myoglobin/*.pdb 2>/dev/null | grep -v '.protein.pdb' | wc -l), \
+  724  Protein-only PDB: $(ls ~/lab06-$MYGIT/myoglobin/*.protein.pdb 2>/dev/null | wc -l), \
+  725  PQR: $(ls ~/lab06-$MYGIT/myoglobin/*.pqr 2>/dev/null | wc -l)"
+  726  #!/usr/bin/env bash
+  727  set -euo pipefail
+  728  PH=${PH:-6.5}  # allow overriding with: PH=7.0 ./script.sh
+  729  for pdb in *.pdb; do
+  730    [[ "$pdb" == *.protein.pdb ]] && continue;    base="${pdb%.pdb}"                                  # e.g., XP_...-model_v4
+  731    prot="${base}.protein.pdb"                           # protein-only PDB
+  732    pqr="${base}.pqr"                                    # output PQR
+  733    pdb_delhetatm "$pdb" > "$prot"; 
+  734    pdb2pqr --ff=AMBER --with-ph="$PH" --drop-water --keep-chain "$prot" "$pqr"     > "${base}.pdb2pqr.log" 2>&1; 
+  735    Z=$(awk '$1=="ATOM"||$1=="HETATM"{s+=$9} END{printf "%.3f", s}' "$pqr");    printf "%-40s pH=%s  Z=%s\n" "$base" "$PH" "$Z"; done
+  736  echo; echo "Original PDB: $(ls ~/lab06-$MYGIT/myoglobin/*.pdb 2>/dev/null | grep -v '.protein.pdb' | wc -l), \
+  737  Protein-only PDB: $(ls ~/lab06-$MYGIT/myoglobin/*.protein.pdb 2>/dev/null | wc -l), \
+  738  PQR: $(ls ~/lab06-$MYGIT/myoglobin/*.pqr 2>/dev/null | wc -l)"
+  739  mamba activate bio312
+  740  jupyter lab --no-browser --ip=0.0.0.0 --port=8888 --ServerApp.token=''
+  741  mamba activate bio312
+  742  jupyter lab --no-browser --ip=0.0.0.0 --port=8888 --ServerApp.token=''
+  743  conda activate bio312
+  744  conda activate bio312
+  745  mamba activate bio312
+  746  jupyter lab --no-browser --ip=0.0.0.0 --port=8888 --ServerApp.token=''
+  747  conda activate bio312
+  748  mamba activate bio312
+  749  mamba install -y -c conda-forge pdb2pqr
+  750  #!/usr/bin/env bash
+  751  set -euo pipefail
+  752  PH=${PH:-6.5}  # allow overriding with: PH=7.0 ./script.sh
+  753  for pdb in *.pdb; do
+  754    [[ "$pdb" == *.protein.pdb ]] && continue;    base="${pdb%.pdb}"                                  # e.g., XP_...-model_v4
+  755    prot="${base}.protein.pdb"                           # protein-only PDB
+  756    pqr="${base}.pqr"                                    # output PQR
+  757    pdb_delhetatm "$pdb" > "$prot"; 
+  758    pdb2pqr --ff=AMBER --with-ph="$PH" --drop-water --keep-chain "$prot" "$pqr"     > "${base}.pdb2pqr.log" 2>&1; 
+  759    Z=$(awk '$1=="ATOM"||$1=="HETATM"{s+=$9} END{printf "%.3f", s}' "$pqr");    printf "%-40s pH=%s  Z=%s\n" "$base" "$PH" "$Z"; done
+  760  conda activate bio312
+  761  pwd
+  762  cd ~/lab06-$MYGIT/SPTY2D1
+  763  chmod +x ~/lab06-$MYGIT/afetch_by_uniprot.sh
+  764  ~/lab06-$MYGIT/afetch_by_uniprot.sh ~/lab06-$MYGIT/SPTY2D1/SPTY2D1_refseq_uniprot_subset.tsv ~/lab06-$MYGIT/SPTY2D1
+  765  #!/usr/bin/env bash
+  766  set -euo pipefail
+  767  PH=${PH:-6.5}  # allow overriding with: PH=7.0 ./script.sh
+  768  for pdb in *.pdb; do
+  769    [[ "$pdb" == *.protein.pdb ]] && continue;    base="${pdb%.pdb}"                                  # e.g., XP_...-model_v4
+  770    prot="${base}.protein.pdb"                           # protein-only PDB
+  771    pqr="${base}.pqr"                                    # output PQR
+  772    pdb_delhetatm "$pdb" > "$prot"; 
+  773    pdb2pqr --ff=AMBER --with-ph="$PH" --drop-water --keep-chain "$prot" "$pqr"     > "${base}.pdb2pqr.log" 2>&1; 
+  774    Z=$(awk '$1=="ATOM"||$1=="HETATM"{s+=$9} END{printf "%.3f", s}' "$pqr");    printf "%-40s pH=%s  Z=%s\n" "$base" "$PH" "$Z"; done
+  775  echo; echo "Original PDB: $(ls ~/lab06-$MYGIT/SPTY2D1/*.pdb 2>/dev/null | grep -v '.protein.pdb' | wc -l), \
+  776  Protein-only PDB: $(ls ~/lab06-$MYGIT/SPTY2D1/*.protein.pdb 2>/dev/null | wc -l), \
+  777  PQR: $(ls ~/lab06-$MYGIT/SPTY2D1/*.pqr 2>/dev/null | wc -l)"
+  778  out=~/lab06-$MYGIT/myoglobin/net_charges.tsv
+  779  : > "$out"   # truncate/create
+  780  for f in ~/lab06-$MYGIT/myoglobin/*.pqr; do   base=$(basename "$f");   Z=$(awk '$1=="ATOM"||$1=="HETATM"{s+=$9} END{printf "%.3f", s}' "$f");   printf "%s\tNetCharge=%s\n" "$base" "$Z" >> "$out"; done
+  781  pwd
+  782  out=~/lab06-$MYGIT/SPTY2D1/net_charges.tsv
+  783  : > "$out"   # truncate/create
+  784  for f in ~/lab06-$MYGIT/SPTY2D1/*.pqr; do   base=$(basename "$f");   Z=$(awk '$1=="ATOM"||$1=="HETATM"{s+=$9} END{printf "%.3f", s}' "$f");   printf "%s\tNetCharge=%s\n" "$base" "$Z" >> "$out"; done
+  785  less ~/lab06-$MYGIT/SPTY2D1/net_charges.tsv
+  786  mamba activate bio312
+  787  mamba install -y -c conda-forge pymol-open-source
+  788  python3 ~/lab06-$MYGIT/render_charge_pngs.py ~/lab06-"$MYGIT"/SPTY2D1
+  789  git clone git@github.com:Bio312/lab06-$MYGIT.git
+  790  cd lab06-$MYGIT
+  791  mkdir ~/lab06-$MYGIT/myoglobin
+  792  cd ~/lab06-$MYGIT/myoglobin
+  793  less ~/lab04-$MYGIT/myoglobin/myoglobin.homologs.fas
+  794  rpsblast -query ~/lab04-$MYGIT/myoglobin/myoglobin.homologs.fas -db ~/data/Pfam/Pfam -out ~/lab06-$MYGIT/myoglobin/myoglobin.rps-blast.out  -outfmt "6 qseqid qlen qstart qend evalue stitle" -evalue .0000000001
+  795  less ~/lab05-$MYGIT/myoglobin/myoglobin.homologs.al.mid.treefile
+  796  Rscript --vanilla ~/lab06-$MYGIT/plotTreeAndDomains2.r ~/lab05-$MYGIT/myoglobin/myoglobin.homologs.al.mid.treefile ~/lab06-$MYGIT/myoglobin/myoglobin.rps-blast.out ~/lab04-$MYGIT/myoglobin/myoglobin.homologs.fas ~/lab06-$MYGIT/myoglobin/myoglobin.tree.rps.pdf
+  797  mamba activate base
+  798  mlr --inidx --ifs "\t" --opprint  cat ~/lab06-$MYGIT/myoglobin/myoglobin.rps-blast.out | tail -n +2 | less -S
+  799  cut -f 1 ~/lab06-$MYGIT/myoglobin/myoglobin.rps-blast.out | sort | uniq -c
+  800  cut -f 6 ~/lab06-$MYGIT/myoglobin/myoglobin.rps-blast.out | sort | uniq -c
+  801  awk '{a=$4-$3;print $1,'\t',a;}' ~/lab06-$MYGIT/myoglobin/myoglobin.rps-blast.out |  sort  -k2nr
+  802  cut -f 1,5 -d $'\t' ~/lab06-$MYGIT/myoglobin/myoglobin.rps-blast.out 
+  803  awk -F'|' '{print $2}' /home/bio312-user/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.filtered.out  | sort -u > /home/bio312-user/lab06-$MYGIT/myoglobin/myoglobin_refseq_ids.txt
+  804  awk 'NR==FNR{m[$1]=$2; next} {if($0 in m) print $0"\t"m[$0]; else print $0"\tMISSING"}' ~/lab06-$MYGIT/refseq_uniprot.tsv ~/lab06-$MYGIT/myoglobin/myoglobin_refseq_ids.txt > ~/lab06-$MYGIT/myoglobin/myoglobin_refseq_uniprot_subset.tsv
+  805  less ~/lab06-$MYGIT/myoglobin/myoglobin_refseq_uniprot_subset.tsv
+  806  chmod +x ~/lab06-$MYGIT/afetch_by_uniprot.sh
+  807  ~/lab06-$MYGIT/afetch_by_uniprot.sh ~/lab06-$MYGIT/myoglobin/myoglobin_refseq_uniprot_subset.tsv ~/lab06-$MYGIT/myoglobin
+  808  conda activate bio312
+  809  cd ~/lab06-$MYGIT/SPTY2D1
+  810  cp ~/lab06-$MYGIT/myoglobin/BIO312_Myoglobin_Visualization.ipynb  ~/lab06-$MYGIT/SPTY2D1/BIO312_SPTY2D1_Visualization.ipynb
+  811  mamba activate bio312
+  812  jupyter lab --no-browser --ip=0.0.0.0 --port=8888 --ServerApp.token=''
+  813  conda activate bio312
+  814  pwd
+  815  cd ~/lab06-$MYGIT/myoglobin
+  816  pwd
+  817  out=~/lab06-$MYGIT/myoglobin/net_charges.tsv
+  818  : > "$out"   # truncate/create
+  819  for f in ~/lab06-$MYGIT/myoglobin/*.pqr; do   base=$(basename "$f");   Z=$(awk '$1=="ATOM"||$1=="HETATM"{s+=$9} END{printf "%.3f", s}' "$f");   printf "%s\tNetCharge=%s\n" "$base" "$Z" >> "$out"; done
+  820  less ~/lab06-$MYGIT/myoglobin/net_charges.tsv
+  821  mamba activate bio312
+  822  mamba install -y -c conda-forge pymol-open-source
+  823  python ~/lab06-$MYGIT/pqr_to_charges_pdb.py ~/lab06-$MYGIT/myoglobin
+  824  python3 ~/lab06-$MYGIT/render_charge_pngs.py ~/lab06-"$MYGIT"/myoglobin
+  825  # Go to your images directory
+  826  cd ~/lab06-"$MYGIT"/myoglobin
+  827  # 1) Build helper maps:
+  828  #    - abbreviation -> status (aquatic/terrestrial)
+  829  awk -F, 'NR>1 {print $2"\t"$5}' ~/lab06-"$MYGIT"/species_key.csv   | sort -u > abbr_status.tsv
+  830  #    - refseq -> abbreviation (from lab03 list like Hsap|NP_...|MB)
+  831  awk -F'|' '{print $2"\t"$1}' ~/lab03-"$MYGIT"/myoglobin/myoglobin.blastp.detail.filtered.out   | sort -u > refseq_abbr.tsv
+  832  # 2) Map refseq -> png filename (derives refseq from the part before "__")
+  833  ls *.png 2>/dev/null   | sed 's/\.png$//'   | awk -F'__' '{print $1"\t"$0".png"}'   | sort -u > refseq_png.tsv
+  834  # 3) Join to get refseq -> abbr -> status
+  835  #    (join by abbreviation, so flip refseq_abbr first)
+  836  awk -F'\t' '{print $2"\t"$1}' refseq_abbr.tsv | sort -u > abbr_refseq.tsv
+  837  join -t $'\t' -1 1 -2 1 abbr_refseq.tsv abbr_status.tsv > abbr_refseq_status.tsv
+  838  awk -F'\t' '{print $2"\t"$1"\t"$3}' abbr_refseq_status.tsv | sort -u > refseq_abbr_status.tsv
+  839  # Columns now: RefSeq \t Abbr \t Status
+  840  # 4) Attach PNG filename (join on RefSeq)
+  841  join -t $'\t' -1 1 -2 1 refseq_png.tsv refseq_abbr_status.tsv > png_refseq_abbr_status.tsv
+  842  # Columns: RefSeq \t PNG \t Abbr \t Status
+  843  # 5) Split into lists and make a pretty guide
+  844  awk -F'\t' '$4=="aquatic"{print $2}' png_refseq_abbr_status.tsv > aquatic_pngs.txt
+  845  awk -F'\t' '$4=="terrestrial"{print $2}' png_refseq_abbr_status.tsv > terrestrial_pngs.txt
+  846  # Human-readable table
+  847  echo
+  848  echo "PNG GUIDE (RefSeq | PNG | Abbr | Status):"
+  849  column -t -s $'\t' png_refseq_abbr_status.tsv | tee PNG_GUIDE.txt
+  850  echo
+  851  echo "Counts -> Aquatic: $(wc -l < aquatic_pngs.txt 2>/dev/null || echo 0), Terrestrial: $(wc -l < terrestrial_pngs.txt 2>/dev/null || echo 0)"
+  852  less PNG_GUIDE.txt
+  853  python3 - <<'EOF'
+  854  import os, re, pandas as pd
+  855  import matplotlib
+  856  matplotlib.use('Agg')     # headless
+  857  import matplotlib.pyplot as plt
+  858  # --- env & inputs ---
+  859  MYGIT = os.environ.get("MYGIT")
+  860  if not MYGIT:
+  861      raise SystemExit("ERROR: $MYGIT is not set")
+  862  charges_path   = "net_charges.tsv"
+  863  species_key    = os.path.expanduser(f"~/lab06-{MYGIT}/species_key.csv")
+  864  lab03_list     = os.path.expanduser(f"~/lab03-{MYGIT}/myoglobin/myoglobin.blastp.detail.filtered.out")
+  865  # --- 1) read net_charges.tsv (File \t NetCharge=VAL) ---
+  866  rows = []
+  867  with open(charges_path) as fh:
+  868      for line in fh:
+  869          line=line.strip()
+  870          if not line: continue
+  871          try:
+  872              fname, ztok = line.split('\t', 1)
+  873          except ValueError:
+  874              continue
+  875          if not ztok.startswith("NetCharge="): continue
+  876          try:
+  877              z = float(ztok.split("=",1)[1])
+  878          except ValueError:
+  879              continue
+  880          rows.append((fname, z))
+  881  charges = pd.DataFrame(rows, columns=["File","NetCharge"])
+  882  # --- 2) RefSeq accession from filename (before the __) ---
+  883  charges["RefSeq"] = charges["File"].str.split("__", n=1, expand=True)[0]
+  884  # --- 3) Build RefSeq -> species abbr map from lab03 list (Hsap|NP_...|MB) ---
+  885  acc2abbr = {}
+  886  with open(lab03_list) as fh:
+  887      for line in fh:
+  888          line=line.strip()
+  889          if not line or line.startswith("#"): continue
+  890          parts = line.split("|")
+  891          if len(parts) >= 2:
+  892              abbr, refseq = parts[0], parts[1]
+  893              acc2abbr[refseq] = abbr
+  894  charges["Abbr"]   = charges["RefSeq"].map(acc2abbr)
+  895  # --- 4) Abbr -> status (aquatic/terrestrial) from species_key.csv ---
+  896  sk = pd.read_csv(species_key)  # expects headers: species_name,abbreviation,taxid,common_name,aquatic
+  897  abbr2status = dict(zip(sk["abbreviation"], sk["aquatic"]))
+  898  charges["Status"] = charges["Abbr"].map(abbr2status).fillna("unknown")
+  899  # --- 5) Save labeled table ---
+  900  charges.to_csv("net_charges_labeled.tsv", sep="\t", index=False)
+  901  # --- 6) Plot boxplot (aquatic vs terrestrial) ---
+  902  df = charges[charges["Status"].isin(["aquatic","terrestrial"])].copy()
+  903  if df.empty:
+  904      print("WARN: no aquatic/terrestrial rows found after mapping; check species_key.csv and lab03 list.")
+  905  else:
+  906      ax = df.boxplot(column="NetCharge", by="Status", grid=False)
+  907      plt.title("Net charge by habitat")
+  908      plt.suptitle("")
+  909      plt.ylabel("Net charge (from .pqr at your chosen pH)")
+  910      plt.tight_layout()
+  911      plt.savefig("netcharge_boxplot.png", dpi=150)
+  912      print("Saved: net_charges_labeled.tsv, netcharge_boxplot.png")
+  913  # quick counts
+  914  print("\nCounts by Status:")
+  915  print(charges["Status"].value_counts(dropna=False))
+  916  EOF
+  917  mamba activate bio312
+  918  mamba install -y -c conda-forge mdtraj pandas matplotlib
+  919  python3 ~/lab06-$MYGIT/dssp_batch_summary_mdtraj.py   --pdb-dir   ~/lab06-$MYGIT/myoglobin   --species-key ~/lab06-$MYGIT/species_key.csv   --refseq-map  ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.filtered.out   --out-csv   ~/lab06-$MYGIT/myoglobin/dssp_summary.csv   --plots
+  920  python3 ~/lab06-$MYGIT/render_charge_pngs.py ~/lab06-"$MYGIT"/myoglobin
+  921  mkdir ~/lab06-$MYGIT/SPTY2D1
+  922  cd ~/lab06-$MYGIT/SPTY2D1
+  923  less ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.fas
+  924  pwd
+  925  rpsblast -query ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.fas -db ~/data/Pfam/Pfam -out ~/lab06-$MYGIT/SPTY2D1/SPTY2D1.rps-blast.out  -outfmt "6 qseqid qlen qstart qend evalue stitle" -evalue .0000000001
+  926  less ~/lab05-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.mid.treefile
+  927  Rscript --vanilla ~/lab06-$MYGIT/plotTreeAndDomains2.r ~/lab05-$MYGIT/myoglobin/myoglobin.homologs.al.mid.treefile ~/lab06-$MYGIT/myoglobin/myoglobin.rps-blast.out ~/lab04-$MYGIT/myoglobin/myoglobin.homologs.fas ~/lab06-$MYGIT/myoglobin/myoglobin.tree.rps.pdf
+  928  less ~/lab05-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.mid.treefile
+  929  Rscript --vanilla ~/lab06-$MYGIT/plotTreeAndDomains2.r ~/lab05-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.mid.treefile ~/lab06-$MYGIT/SPTY2D1/SPTY2D1.rps-blast.out ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.fas ~/lab06-$MYGIT/SPTY2D1/SPTY2D1.tree.rps.pdf
+  930  mamba activate base
+  931  mlr --inidx --ifs "\t" --opprint  cat ~/lab06-$MYGIT/SPTY2D1/SPTY2D1.rps-blast.out | tail -n +2 | less -S
+  932  cut -f 1 ~/lab06-$MYGIT/SPTY2D1/SPTY2D1.rps-blast.out | sort | uniq -c
+  933  cut -f 6 ~/lab06-$MYGIT/SPTY2D1/SPTY2D1.rps-blast.out | sort | uniq -c
+  934  awk '{a=$4-$3;print $1,'\t',a;}' ~/lab06-$MYGIT/SPTY2D1/SPTY2D1.rps-blast.out |  sort  -k2nr
+  935  cut -f 1,5 -d $'\t' ~/lab06-$MYGIT/SPTY2D1/SPTY2D1.rps-blast.out 
+  936  awk -F'|' '{print $2}' /home/bio312-user/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.filtered.out  | sort -u > /home/bio312-user/lab06-$MYGIT/SPTY2D1/SPTY2D1_refseq_ids.txt
+  937  awk 'NR==FNR{m[$1]=$2; next} {if($0 in m) print $0"\t"m[$0]; else print $0"\tMISSING"}' ~/lab06-$MYGIT/refseq_uniprot.tsv ~/lab06-$MYGIT/SPTY2D1/SPTY2D1_refseq_ids.txt > ~/lab06-$MYGIT/SPTY2D1/SPTY2D1_refseq_uniprot_subset.tsv
+  938  less ~/lab06-$MYGIT/SPTY2D1/SPTY2D1_refseq_uniprot_subset.tsv
+  939  chmod +x ~/lab06-$MYGIT/afetch_by_uniprot.sh
+  940  ~/lab06-$MYGIT/afetch_by_uniprot.sh ~/lab06-$MYGIT/SPTY2D1/SPTY2D1_refseq_uniprot_subset.tsv ~/lab06-$MYGIT/SPTY2D1
+  941  less ~/lab06-$MYGIT/SPTY2D1/XP_068416897.1__AF-P02177-F1-model_v4.pdb
+  942  mamba activate bio312
+  943  mamba install -y -c conda-forge pdb2pqr
+  944  #!/usr/bin/env bash
+  945  set -euo pipefail
+  946  PH=${PH:-6.5}  # allow overriding with: PH=7.0 ./script.sh
+  947  for pdb in *.pdb; do
+  948    [[ "$pdb" == *.protein.pdb ]] && continue;    base="${pdb%.pdb}"                                  # e.g., XP_...-model_v4
+  949    prot="${base}.protein.pdb"                           # protein-only PDB
+  950    pqr="${base}.pqr"                                    # output PQR
+  951    pdb_delhetatm "$pdb" > "$prot"; 
+  952    pdb2pqr --ff=AMBER --with-ph="$PH" --drop-water --keep-chain "$prot" "$pqr"     > "${base}.pdb2pqr.log" 2>&1; 
+  953    Z=$(awk '$1=="ATOM"||$1=="HETATM"{s+=$9} END{printf "%.3f", s}' "$pqr");    printf "%-40s pH=%s  Z=%s\n" "$base" "$PH" "$Z"; done
+  954  echo; echo "Original PDB: $(ls ~/lab06-$MYGIT/SPTY2D1/*.pdb 2>/dev/null | grep -v '.protein.pdb' | wc -l), \
+  955  Protein-only PDB: $(ls ~/lab06-$MYGIT/SPTY2D1/*.protein.pdb 2>/dev/null | wc -l), \
+  956  PQR: $(ls ~/lab06-$MYGIT/SPTY2D1/*.pqr 2>/dev/null | wc -l)"
+  957  mamba activate bio312
+  958  jupyter lab --no-browser --ip=0.0.0.0 --port=8888 --ServerApp.token=''
+  959  conda activate bio312
+  960  cd lab06-$MYGIT
+  961  cd ~/lab06-$MYGIT/myoglobin
+  962  pwd
+  963  mamba activate bio312
+  964  mamba install -y -c conda-forge pdb2pqr
+  965  #!/usr/bin/env bash
+  966  set -euo pipefail
+  967  PH=${PH:-6.5}  # allow overriding with: PH=7.0 ./script.sh
+  968  for pdb in *.pdb; do
+  969    [[ "$pdb" == *.protein.pdb ]] && continue;    base="${pdb%.pdb}"                                  # e.g., XP_...-model_v4
+  970    prot="${base}.protein.pdb"                           # protein-only PDB
+  971    pqr="${base}.pqr"                                    # output PQR
+  972    pdb_delhetatm "$pdb" > "$prot"; 
+  973    pdb2pqr --ff=AMBER --with-ph="$PH" --drop-water --keep-chain "$prot" "$pqr"     > "${base}.pdb2pqr.log" 2>&1; 
+  974    Z=$(awk '$1=="ATOM"||$1=="HETATM"{s+=$9} END{printf "%.3f", s}' "$pqr");    printf "%-40s pH=%s  Z=%s\n" "$base" "$PH" "$Z"; done
+  975  echo; echo "Original PDB: $(ls ~/lab06-$MYGIT/myoglobin/*.pdb 2>/dev/null | grep -v '.protein.pdb' | wc -l), \
+  976  Protein-only PDB: $(ls ~/lab06-$MYGIT/myoglobin/*.protein.pdb 2>/dev/null | wc -l), \
+  977  PQR: $(ls ~/lab06-$MYGIT/myoglobin/*.pqr 2>/dev/null | wc -l)"
+  978  mamba activate bio312
+  979  jupyter lab --no-browser --ip=0.0.0.0 --port=8888 --ServerApp.token=''
+  980  conda activate bio312
+  981  cd ~/lab06-$MYGIT/SPTY2D1
+  982  # Go to your images directory
+  983  cd ~/lab06-"$MYGIT"/SPTY2D1
+  984  # 1) Build helper maps:
+  985  #    - abbreviation -> status (aquatic/terrestrial)
+  986  awk -F, 'NR>1 {print $2"\t"$5}' ~/lab06-"$MYGIT"/species_key.csv   | sort -u > abbr_status.tsv
+  987  #    - refseq -> abbreviation (from lab03 list like Hsap|NP_...|MB)
+  988  awk -F'|' '{print $2"\t"$1}' ~/lab03-"$MYGIT"/myoglobin/myoglobin.blastp.detail.filtered.out   | sort -u > refseq_abbr.tsv
+  989  # 2) Map refseq -> png filename (derives refseq from the part before "__")
+  990  ls *.png 2>/dev/null   | sed 's/\.png$//'   | awk -F'__' '{print $1"\t"$0".png"}'   | sort -u > refseq_png.tsv
+  991  # 3) Join to get refseq -> abbr -> status
+  992  #    (join by abbreviation, so flip refseq_abbr first)
+  993  awk -F'\t' '{print $2"\t"$1}' refseq_abbr.tsv | sort -u > abbr_refseq.tsv
+  994  join -t $'\t' -1 1 -2 1 abbr_refseq.tsv abbr_status.tsv > abbr_refseq_status.tsv
+  995  awk -F'\t' '{print $2"\t"$1"\t"$3}' abbr_refseq_status.tsv | sort -u > refseq_abbr_status.tsv
+  996  # Columns now: RefSeq \t Abbr \t Status
+  997  # 4) Attach PNG filename (join on RefSeq)
+  998  join -t $'\t' -1 1 -2 1 refseq_png.tsv refseq_abbr_status.tsv > png_refseq_abbr_status.tsv
+  999  # Columns: RefSeq \t PNG \t Abbr \t Status
+ 1000  # 5) Split into lists and make a pretty guide
+ 1001  awk -F'\t' '$4=="aquatic"{print $2}' png_refseq_abbr_status.tsv > aquatic_pngs.txt
+ 1002  awk -F'\t' '$4=="terrestrial"{print $2}' png_refseq_abbr_status.tsv > terrestrial_pngs.txt
+ 1003  # Human-readable table
+ 1004  echo
+ 1005  echo "PNG GUIDE (RefSeq | PNG | Abbr | Status):"
+ 1006  column -t -s $'\t' png_refseq_abbr_status.tsv | tee PNG_GUIDE.txt
+ 1007  echo
+ 1008  echo "Counts -> Aquatic: $(wc -l < aquatic_pngs.txt 2>/dev/null || echo 0), Terrestrial: $(wc -l < terrestrial_pngs.txt 2>/dev/null || echo 0)"
+ 1009  less PNG_GUIDE.txt
+ 1010  echo "Counts -> Aquatic: $(wc -l < aquatic_pngs.txt 2>/dev/null || echo 0), Terrestrial: $(wc -l < terrestrial_pngs.txt 2>/dev/null || echo 0)"
+ 1011  less PNG_GUIDE.txt
+ 1012  python3 - <<'EOF'
+import os, re, pandas as pd
+import matplotlib
+matplotlib.use('Agg')     # headless
+import matplotlib.pyplot as plt
+
+# --- env & inputs ---
+MYGIT = os.environ.get("MYGIT")
+if not MYGIT:
+    raise SystemExit("ERROR: $MYGIT is not set")
+
+charges_path   = "net_charges.tsv"
+species_key    = os.path.expanduser(f"~/lab06-{MYGIT}/species_key.csv")
+lab03_list     = os.path.expanduser(f"~/lab03-{MYGIT}/myoglobin/myoglobin.blastp.detail.filtered.out")
+
+# --- 1) read net_charges.tsv (File \t NetCharge=VAL) ---
+rows = []
+with open(charges_path) as fh:
+    for line in fh:
+        line=line.strip()
+        if not line: continue
+        try:
+            fname, ztok = line.split('\t', 1)
+        except ValueError:
+            continue
+        if not ztok.startswith("NetCharge="): continue
+        try:
+            z = float(ztok.split("=",1)[1])
+        except ValueError:
+            continue
+        rows.append((fname, z))
+
+charges = pd.DataFrame(rows, columns=["File","NetCharge"])
+
+# --- 2) RefSeq accession from filename (before the __) ---
+charges["RefSeq"] = charges["File"].str.split("__", n=1, expand=True)[0]
+
+# --- 3) Build RefSeq -> species abbr map from lab03 list (Hsap|NP_...|MB) ---
+acc2abbr = {}
+with open(lab03_list) as fh:
+    for line in fh:
+        line=line.strip()
+        if not line or line.startswith("#"): continue
+        parts = line.split("|")
+        if len(parts) >= 2:
+            abbr, refseq = parts[0], parts[1]
+            acc2abbr[refseq] = abbr
+
+charges["Abbr"]   = charges["RefSeq"].map(acc2abbr)
+
+# --- 4) Abbr -> status (aquatic/terrestrial) from species_key.csv ---
+sk = pd.read_csv(species_key)  # expects headers: species_name,abbreviation,taxid,common_name,aquatic
+abbr2status = dict(zip(sk["abbreviation"], sk["aquatic"]))
+charges["Status"] = charges["Abbr"].map(abbr2status).fillna("unknown")
+
+# --- 5) Save labeled table ---
+charges.to_csv("net_charges_labeled.tsv", sep="\t", index=False)
+
+# --- 6) Plot boxplot (aquatic vs terrestrial) ---
+df = charges[charges["Status"].isin(["aquatic","terrestrial"])].copy()
+if df.empty:
+    print("WARN: no aquatic/terrestrial rows found after mapping; check species_key.csv and lab03 list.")
+else:
+    ax = df.boxplot(column="NetCharge", by="Status", grid=False)
+    plt.title("Net charge by habitat")
+    plt.suptitle("")
+    plt.ylabel("Net charge (from .pqr at your chosen pH)")
+    plt.tight_layout()
+    plt.savefig("netcharge_boxplot.png", dpi=150)
+    print("Saved: net_charges_labeled.tsv, netcharge_boxplot.png")
+
+# quick counts
+print("\nCounts by Status:")
+print(charges["Status"].value_counts(dropna=False))
+EOF
+
+ 1013  python3 - <<'EOF'
+import os, re, pandas as pd
+import matplotlib
+matplotlib.use('Agg')     # headless
+import matplotlib.pyplot as plt
+
+# --- env & inputs ---
+MYGIT = os.environ.get("MYGIT")
+if not MYGIT:
+    raise SystemExit("ERROR: $MYGIT is not set")
+
+charges_path   = "net_charges.tsv"
+species_key    = os.path.expanduser(f"~/lab06-{MYGIT}/species_key.csv")
+lab03_list     = os.path.expanduser(f"~/lab03-{MYGIT}/SPTY2D1/SPTY2D1.blastp.detail.filtered.out")
+
+# --- 1) read net_charges.tsv (File \t NetCharge=VAL) ---
+rows = []
+with open(charges_path) as fh:
+    for line in fh:
+        line=line.strip()
+        if not line: continue
+        try:
+            fname, ztok = line.split('\t', 1)
+        except ValueError:
+            continue
+        if not ztok.startswith("NetCharge="): continue
+        try:
+            z = float(ztok.split("=",1)[1])
+        except ValueError:
+            continue
+        rows.append((fname, z))
+
+charges = pd.DataFrame(rows, columns=["File","NetCharge"])
+
+# --- 2) RefSeq accession from filename (before the __) ---
+charges["RefSeq"] = charges["File"].str.split("__", n=1, expand=True)[0]
+
+# --- 3) Build RefSeq -> species abbr map from lab03 list (Hsap|NP_...|MB) ---
+acc2abbr = {}
+with open(lab03_list) as fh:
+    for line in fh:
+        line=line.strip()
+        if not line or line.startswith("#"): continue
+        parts = line.split("|")
+        if len(parts) >= 2:
+            abbr, refseq = parts[0], parts[1]
+            acc2abbr[refseq] = abbr
+
+charges["Abbr"]   = charges["RefSeq"].map(acc2abbr)
+
+# --- 4) Abbr -> status (aquatic/terrestrial) from species_key.csv ---
+sk = pd.read_csv(species_key)  # expects headers: species_name,abbreviation,taxid,common_name,aquatic
+abbr2status = dict(zip(sk["abbreviation"], sk["aquatic"]))
+charges["Status"] = charges["Abbr"].map(abbr2status).fillna("unknown")
+
+# --- 5) Save labeled table ---
+charges.to_csv("net_charges_labeled.tsv", sep="\t", index=False)
+
+# --- 6) Plot boxplot (aquatic vs terrestrial) ---
+df = charges[charges["Status"].isin(["aquatic","terrestrial"])].copy()
+if df.empty:
+    print("WARN: no aquatic/terrestrial rows found after mapping; check species_key.csv and lab03 list.")
+else:
+    ax = df.boxplot(column="NetCharge", by="Status", grid=False)
+    plt.title("Net charge by habitat")
+    plt.suptitle("")
+    plt.ylabel("Net charge (from .pqr at your chosen pH)")
+    plt.tight_layout()
+    plt.savefig("netcharge_boxplot.png", dpi=150)
+    print("Saved: net_charges_labeled.tsv, netcharge_boxplot.png")
+
+# quick counts
+print("\nCounts by Status:")
+print(charges["Status"].value_counts(dropna=False))
+EOF
+
+ 1014  mamba activate bio312
+ 1015  mamba install -y -c conda-forge mdtraj pandas matplotlib
+ 1016  python3 ~/lab06-$MYGIT/dssp_batch_summary_mdtraj.py   --pdb-dir   ~/lab06-$MYGIT/SPTY2D1   --species-key ~/lab06-$MYGIT/species_key.csv   --refseq-map  ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.filtered.out   --out-csv   ~/lab06-$MYGIT/SPTY2D1/dssp_summary.csv   --plots
+ 1017  python3 ~/lab06-$MYGIT/dssp_batch_summary_mdtraj.py   --pdb-dir   ~/lab06-$MYGIT/SPTY2D1   --species-key ~/lab06-$MYGIT/species_key.csv   --refseq-map  ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.filtered.out   --out-csv   ~/lab06-$MYGIT/SPTY2D1/dssp_summary.csv   --plots
+ 1018  pwd
+ 1019  ls
+ 1020  history > lab6.commandhistory.txt

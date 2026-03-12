@@ -1,0 +1,28 @@
+INFO:PDB2PQR v3.6.1: biomolecular structure conversion software.
+INFO:Please cite:  Jurrus E, et al.  Improvements to the APBS biomolecular solvation software suite.  Protein Sci 27 112-128 (2018).
+INFO:Please cite:  Dolinsky TJ, et al.  PDB2PQR: expanding and upgrading automated preparation of biomolecular structures for molecular simulations. Nucleic Acids Res 35 W522-W525 (2007).
+INFO:Checking and transforming input arguments.
+INFO:Loading topology files.
+INFO:Loading molecule: XP_019803585.2__AF-A0A2U4CDS1-F1-model_v4.protein.pdb
+ERROR:Error parsing line: invalid literal for int() with base 10: 'TURTR'
+ERROR:<DBREF  XXXX A    1   738  UNP    A0A2U4CDS1 A0A2U4CDS1_TURTR     1    738>
+ERROR:Truncating remaining errors for record type:DBREF
+WARNING:Warning: XP_019803585.2__AF-A0A2U4CDS1-F1-model_v4.protein.pdb is a non-standard PDB file.
+
+ERROR:['DBREF']
+INFO:Dropping water from structure.
+INFO:Setting up molecule.
+INFO:Created biomolecule object with 738 residues and 5600 atoms.
+INFO:Setting termini states for biomolecule chains.
+INFO:Loading forcefield.
+INFO:Loading hydrogen topology definitions.
+INFO:This biomolecule is clean.  No repair needed.
+INFO:Updating disulfide bridges.
+INFO:Debumping biomolecule.
+INFO:Adding hydrogens to biomolecule.
+INFO:Debumping biomolecule (again).
+INFO:Optimizing hydrogen bonds
+INFO:Applying force field to biomolecule states.
+INFO:Regenerating headers.
+INFO:Regenerating PDB lines.
+WARNING:Ignoring 391 header lines in output.
