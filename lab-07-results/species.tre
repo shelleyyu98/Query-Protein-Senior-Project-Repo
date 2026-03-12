@@ -1,0 +1,19 @@
+(Carassius_auratus,
+ (Latimeria_chalumnae,
+  (Anolis_carolinensis,
+   (
+     (  # Boreoeutheria
+       (  # Laurasiatheria (monophyletic)
+         (Canis_lupus_familiaris,
+           (Ursus_arctos,(Mustela_putorius_furo,(Odobenus_rosmarus,Zalophus_californianus)))),
+         (Equus_caballus,
+           ((Bos_taurus,Capra_hircus),
+             (Tursiops_truncatus,(Balaenoptera_musculus,Eschrichtius_robustus))))
+       ),
+       Homo_sapiens
+     ),
+     (Loxodonta_africana,Chrysochloris_asiatica)  # Afrotheria
+   )
+  )
+ )
+);
