@@ -1,0 +1,1002 @@
+   19  ls
+   20  git add .
+   21  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+   22  git pull --no-edit
+   23  git push 
+   24  git add .
+   25  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+   26  git pull --no-edit
+   27  git push 
+   28  git add .
+   29  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+   30  git pull --no-edit
+   31  git push 
+   32  git add .
+   33  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+   34  git pull --no-edit
+   35  git push 
+   36  cd ../
+   37  cd lab08-key/
+   38  git add .
+   39  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+   40  git pull --no-edit
+   41  git push 
+   42  cut -f 1 ~/lab08-$MYGIT/globins/globins.rps-blast.out | sort | uniq -c
+   43  cd ../
+   44  cd lab08
+   45  git add .
+   46  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+   47  git pull --no-edit
+   48  git push 
+   49  cd ../
+   50  cd lab08-key/
+   51  cut -f 1 ~/lab08-$MYGIT/globins/globins.rps-blast.out | sort | uniq -c
+   52  cut -f 6 ~/lab08-$MYGIT/globins/globins.rps-blast.out | sort | uniq -c
+   53  awk '{a=$4-$3;print $1,'\t',a;}' ~/lab08-$MYGIT/globins/globins.rps-blast.out |  sort  -k2nr
+   54  cut -f 1,5 -d $'\t' ~/lab08-$MYGIT/globins/globins.rps-blast.out 
+   55  git add .
+   56  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+   57  git pull --no-edit
+   58  git push 
+   59  Rscript  --vanilla ~/lab08-$MYGIT/plotTreeAndDomains.r ~/lab08-$MYGIT/globins/globins.homologsf.outgroupbeta.treefile ~/lab08-$MYGIT/globins/globins.rps-blast.out ~/lab08-$MYGIT/globins/globins.tree.rps.pdf
+   60  git clone https://github.com/Bio312/lab09-key
+   61  cd lab09-key/
+   62  sickle
+   63  spades
+   64  cd lab09-key/
+   65  ls
+   66  fastq-dump ERR486857 --split-e
+   67  fasterq-dump --split-files ERR486857
+   68  ls
+   69  less -S ERR486857_1.fastq
+   70  sickle pe -f ERR486857_1.fastq -r ERR486857_2.fastq -t sanger -o trimmed_ERR486857_1.fastq -p trimmed_ERR486857_2.fastq  -s trimmed_singles_file.fastq
+   71  spades.py -1 trimmed_ERR486857_1.fastq -2 trimmed_ERR486857_2.fastq -o assembly --only-assembler
+   72  ls
+   73  cd genomes
+   74  ls
+   75  wget ftp://ftp.ncbi.nih.gov/genomes/refseq/vertebrate_mammalian/Homo_sapiens/all_assembly_versions/GCF_000001405.39_GRCh38.p13/GCF_000001405.39_GRCh38.p13_genomic.fna.gz && gunzip GCF_000001405.39_GRCh38.p13_genomic.fna.gz
+   76  less ~/lab09-$MYGIT/genomes/GCF_000001405.39_GRCh38.p13_genomic.fna
+   77  wget ftp://ftp.ncbi.nih.gov/genomes/all/GCF/000/027/325/GCF_000027325.1_ASM2732v1/GCF_000027325.1_ASM2732v1_genomic.fna.gz  && gunzip GCF_000027325.1_ASM2732v1_genomic.fna.gz   
+   78  less ~/lab09-$MYGIT/genomes/GCF_000027325.1_ASM2732v1_genomic.fna
+   79  cd ~/lab09-$MYGIT/
+   80  quast
+   81  quast.py
+   82  quast.py --large  ~/lab09-$MYGIT/genomes/GCF_000001405.39_GRCh38.p13_genomic.fna --min-contig 0 --threads 2 -o ~/lab09-$MYGIT/quast_human
+   83  cd ~/lab09-$MYGIT
+   84  find . -size +5M | sed 's|^\./||g' | cat >> .gitignore; awk '!NF || !seen[$0]++' .gitignore
+   85  git add .
+   86  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+   87  git pull --no-edit
+   88  git push 
+   89  git clone https://github.com/Bio312/lab09
+   90  cd lab09
+   91  git add .
+   92  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+   93  git pull --no-edit
+   94  git push 
+   95  sudo passwd
+   96  sudo passwd bio312-user
+   97  sudo passwd
+   98  sudo adduser iberger
+   99  sudo passwd iberger
+  100  cd lab08-key/
+  101  ls
+  102  cd globins
+  103  Rscript  --vanilla ~/lab08-$MYGIT/plotTreeAndDomains2.r ~/lab08-$MYGIT/globins/globins.homologsf.outgroupbeta.treefile ~/lab08-$MYGIT/globins/globins.rps-blast.out ~/lab08-$MYGIT/globins/globins.tree.rps.pdf
+  104  Rscript  --vanilla ~/lab08-$MYGIT/plotTreeAndDomains2.r ~/lab08-$MYGIT/globins/globins.homologsf.outgroupbeta.treefile ~/lab08-$MYGIT/globins/globins.rps-blast.out ~/lab08-$MYGIT/globins/globins.homologs.fas ~/lab08-$MYGIT/globins/globins.tree.rps.pdf
+  105  cd
+  106  git clone https://github.com/Bio312/lab10-key
+  107  cd lab10-key/
+  108  ls
+  109  xclock &
+  110  cd fastq-files
+  111  fasterq-dump SRR1297272
+  112  fasterq-dump SRR1297281
+  113  less SRR1297281.fastq
+  114  fastqc SRR1297281.fastq
+  115  wkhtmltopdf  --print-media-type SRR1297281_fastqc.html SRR1297281_fastqc.pdf
+  116  trimmomatic
+  117  cd
+  118  cd tools
+  119  ls
+  120  cd ../
+  121  cd lab10-key/
+  122  ls
+  123  cd fastq-files/
+  124  java -jar ~/tools/trimmomatic.jar SE -phred33 SRR1297272.fastq SRR1297272.trimmed.fastq  LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+  125  cd ~/lab10-$MYGIT/genome
+  126  wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/209/225/GCF_000209225.1_ASM20922v1/GCF_000209225.1_ASM20922v1_genomic.fna.gz && gunzip GCF_000209225.1_ASM20922v1_genomic.fna.gz
+  127  wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/209/225/GCF_000209225.1_ASM20922v1/GCF_000209225.1_ASM20922v1_genomic.gff.gz && gunzip GCF_000209225.1_ASM20922v1_genomic.gff.gz
+  128  hisat2-build ~/lab10-$MYGIT/genome/GCF_000209225.1_ASM20922v1_genomic.fna nemat_genome_index
+  129  cd ~/lab10-$MYGIT/mapping
+  130  hisat2  -U ../fastq-files/SRR1297272.trimmed.fastq -S SRR1297272.sam -x ../genome/nemat_genome_index  -p 2
+  131  samtools sort SRR1297281.sam -O BAM > SRR1297281.bam 
+  132  samtools sort SRR1297272.sam -O BAM > SRR1297272.bam
+  133  samtools index SRR1297272.bam
+  134  cd ~/lab10-$MYGIT/
+  135  bash ~/tools/IGV_Linux_2.16.2/igv.sh
+  136  cuffdiff
+  137  locate cuffdiff
+  138  pwd
+  139  find . -size +5M | sed 's|^\./||g' | cat >> .gitignore; awk '!NF || !seen[$0]++' .gitignore
+  140  git add .
+  141  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  142  git pull --no-edit
+  143  git push 
+  144  xclock &
+  145  bash ~/tools/IGV_Linux_2.16.2/igv.sh
+  146  cd ~/lab10-$MYGIT/diffexp
+  147  conda activate cufflinks_env
+  148  cd ../
+  149  find . -size +5M | sed 's|^\./||g' | cat >> .gitignore; awk '!NF || !seen[$0]++' .gitignore
+  150  git add .
+  151  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  152  git pull --no-edit
+  153  git push 
+  154  cd ../
+  155  git clone https://github.com/Bio312/lab10
+  156  cd lab10
+  157  find . -size +5M | sed 's|^\./||g' | cat >> .gitignore; awk '!NF || !seen[$0]++' .gitignore
+  158  git add .
+  159  git commit -a -m "Generating Lab10 for amazing Bio312 students"
+  160  git pull --no-edit
+  161  git push 
+  162  xclock &
+  163  ls
+  164  sudo passwd iberger
+  165  mkdir aryl
+  166  tmux a
+  167  tmux
+  168  q() exit
+  169  exit
+  170  tmux a
+  171  cd ../
+  172  ls
+  173  cp bio312-user/miniforge3/ iberger/miniforge3/
+  174  sudo cp bio312-user/miniforge3/ iberger/miniforge3/
+  175  sudo cp -r bio312-user/miniforge3/ iberger/miniforge3/
+  176  sudo chown -R iberger:iberger /home/iberger/miniforge3
+  177  sudo groupadd conda-users
+  178  sudo usermod -aG conda-users bio312-user
+  179  sudo usermod -aG conda-users iberger
+  180  sudo chgrp -R conda-users /home/bio312-user/miniforge3
+  181  sudo chmod -R 755 /home/bio312-user/miniforge3
+  182  pwd
+  183  ls
+  184  cd iberger
+  185  sudo rm -rf /home/iberger/miniforge3
+  186  source /home/bio312-user/miniforge3/etc/profile.d/conda.sh
+  187  stretcher
+  188  ls miniforge3/
+  189  ls miniforge3/bin
+  190  quast
+  191  mfold
+  192  cd aryl
+  193  ls
+  194  sftp milan2.seawulf.stonybrook.edu
+  195  sftp jrest@milan2.seawulf.stonybrook.edu
+  196  curl ifconfig.me
+  197  git clone https://github.com/Bio312/lab12-key
+  198  cd ~/lab12-$MYGIT
+  199  nano ~/lab12-$MYGIT/input.fasta
+  200  R --vanilla
+  201  python
+  202  git add .
+  203  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  204  git pull --no-edit
+  205  git push 
+  206  cd lab12-key/
+  207  git add .
+  208  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  209  git pull --no-edit
+  210  git push 
+  211  cd ../
+  212  git clone https://github.com/Bio312/lab12
+  213  cd lab12
+  214  git add .
+  215  git commit -a -m "Generating Lab 12"
+  216  git pull --no-edit
+  217  git push 
+  218  git add .
+  219  git commit -a -m "Generating Lab 12"
+  220  git pull --no-edit
+  221  git push 
+  222  git add .
+  223  git commit -a -m "Generating Lab 12"
+  224  git pull --no-edit
+  225  git push 
+  226  cd ../
+  227  cd lab12-key/
+  228  git add .
+  229  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  230  git pull --no-edit
+  231  git push 
+  232  cd lab12-key/
+  233  ls
+  234  nano input2.fasta
+  235  R --vanilla
+  236  ls
+  237  less input.fasta
+  238  less input2.fasta
+  239  sudo passwd
+  240  git clone https://github.com/Bio312/lab13-$MYGIT 
+  241  ls
+  242  cd ~/lab13-$MYGIT
+  243  R --vanilla
+  244  ls
+  245  cd ../
+  246  ls
+  247  sudo passwd bio312-user
+  248  exit
+  249  ls
+  250  exit
+  251  nano .bashrc
+  252  mygit
+  253  MYGIT
+  254  echo $MYGIT
+  255  exit
+  256  git clone https://github.com/Bio312/lab13-s5-olivarahman
+  257  cd ~/lab13-s5-olivarahman
+  258  'nano'lab13.fas
+  259  nano lab13.fas
+  260  R --vanilla
+  261  echo $MYGIT
+  262  ls
+  263  rm -rf lab13-key
+  264  MYGIT=test
+  265  echo $MYGIT
+  266  ls
+  267  MYGIT=s4-kostil
+  268  git clone https://github.com/Bio312/lab13-$MYGIT 
+  269  cd ~/lab13-$MYGIT
+  270  pwd
+  271  git clone https://github.com/Bio312/lab13-s1-iberger
+  272  cd ~/lab13-s1-iberger
+  273  nano 
+  274  R --vanilla
+  275  cd ~/lab13-$MYGIT
+  276  pwd
+  277  git add .
+  278  git status
+  279  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  280  git pull --no-edit
+  281  git push 
+  282  animalGene <- read.phyDat("lab13.fas", format = "fasta", type = "DNA")
+  283  cd ~/lab13-s1-iberger
+  284  animalGene <- read.phyDat("lab13.fas", format = "fasta", type = "DNA")
+  285  read.phyDat("lab13.fas", format = "fasta", type = "DNA")
+  286  animalGene <- read.phyDat("lab13.fas", format = "fasta", type = "DNA")
+  287  read.phyDat("lab13.fas", format = "fasta", type = "DNA")
+  288  R --vanilla
+  289  cd ~/lab13-s1-iberger
+  290  git add .
+  291  git status
+  292  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  293  git pull --no-edit
+  294  git push 
+  295  R --vanilla
+  296  nano lab13.fas
+  297  R --vanilla
+  298  nano lab13.faa
+  299  git clone https://github.com/Bio312/lab13-$MYGIT
+  300  MYGIT="TheStellarScientist"
+  301  git clone https://github.com/Bio312/lab13-$MYGIT
+  302  cd ~/lab13-$MYGIT
+  303  R --vanilla
+  304  nano lab13.fas
+  305  R --vanilla
+  306  cd ~/lab13-$MYGIT
+  307  git add .
+  308  git status
+  309  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  310  git pull --no-edit
+  311  git push 
+  312  git clone https://github.com/Bio312/lab12-s1-iberger
+  313  cd ~/lab12-iberger
+  314  pwd
+  315  nano ~/lab12-s1-iberger/input.fasta
+  316  R --vanilla
+  317  parsimony(my15Trees, data=animalGene)
+  318  cd ~/lab13-s5-olivarahman
+  319  R --vanilla
+  320  pwd
+  321  ls
+  322  'parsimony(my15Trees, data=animalGene)
+  323  q
+  324  q
+  325  tmux
+  326  parsimony(my15Trees, data=animalGene)
+  327  pwd
+  328  ~/home/bio-312-user
+  329  cd ~/home/bio-312-user
+  330  cd
+  331  pwd
+  332  ls
+  333  Cd ~/home/bio312-user/lab13-s1-iberger
+  334  cd ~/home/bio312-user/lab13-s1-iberger
+  335  ~/lab13-s1-iberger
+  336  cd ~/lab13-s1-iberger
+  337  pwd
+  338  ls
+  339  pwd
+  340  cd
+  341  pwd
+  342  \ls
+  343  cd ~/lab12-s1-iberger
+  344  pwd
+  345  ls
+  346  R --vanilla
+  347  python
+  348  git add .
+  349  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  350  git pull --no-edit
+  351  git push
+  352  git pull --no-edit
+  353  git push
+  354  git add .
+  355  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  356  git pull --no-edit
+  357  git add .
+  358  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  359  git pull --no-edit
+  360  git push
+  361  git pull
+  362  git add .
+  363  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  364    git config pull.rebase false
+  365  git push
+  366  git fetch origin
+  367  git merge origin lab12-s1-iberger
+  368  git pull origin lab-21-s1-iberger
+  369  git add .
+  370  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  371  git log HEAD..origin/main
+  372  git rebase origin/main
+  373  git add .
+  374  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  375  git push
+  376  git add .
+  377  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  378  tmux
+  379  git clone https://github.com/Bio312/lab09-s1-iberger
+  380  cd lab09-s1-iberger
+  381  fasterq-dump --split-files ERR486857
+  382  less -S ERR486857_1.fastq
+  383  sickle pe -f ERR486857_1.fastq -r ERR486857_2.fastq -t sanger -o trimmed_ERR486857_1.fastq -p trimmed_ERR486857_2.fastq  -s trimmed_singles_file.fastq
+  384  spades.py -1 trimmed_ERR486857_1.fastq -2 trimmed_ERR486857_2.fastq -o assembly --only-assembler
+  385  spades.py -1 trimmed_ERR486857_1.fastq -2 trimmed_ERR486857_2.fastq -o assembly --only-assembler
+  386  fasterq-dump --split-files ERR486857
+  387  sickle pe -f ERR486857_1.fastq -r ERR486857_2.fastq -t sanger -o trimmed_ERR486857_1.fastq -p trimmed_ERR486857_2.fastq  -s trimmed_singles_file.fastq
+  388  spades.py -1 trimmed_ERR486857_1.fastq -2 trimmed_ERR486857_2.fastq -o assembly --only-assembler
+  389  mkdir genomes && cd genomes
+  390  wget ftp://ftp.ncbi.nih.gov/genomes/refseq/vertebrate_mammalian/Homo_sapiens/all_assembly_versions/GCF_000001405.39_GRCh38.p13/GCF_000001405.39_GRCh38.p13_genomic.fna.gz && gunzip GCF_000001405.39_GRCh38.p13_genomic.fna.gz
+  391  wget ftp://ftp.ncbi.nih.gov/genomes/all/GCF/000/027/325/GCF_000027325.1_ASM2732v1/GCF_000027325.1_ASM2732v1_genomic.fna.gz  && gunzip GCF_000027325.1_ASM2732v1_genomic.fna.gz   
+  392  cd ~/lab09-s1-iberger
+  393  quast.py --large  ~/lab09-$MYGIT/genomes/GCF_000001405.39_GRCh38.p13_genomic.fna --min-contig 0 --threads 2 -o ~/lab09-$MYGIT/quast_human
+  394  quast.py --large ~/lab09-$MYGIT/genomes/GCF_000027325.1_ASM2732v1_genomic.fna   --min-contig 0 --threads 2 -o ~/lab09-$MYGIT/quast_myco_NCBI
+  395  quast.py --large ~/lab09-s1-iberger/genomes/GCF_000027325.1_ASM2732v1_genomic.fna   --min-contig 0 --threads 2 -o ~/lab09-s1-iberger/quast_myco_NCBI
+  396  quast.py --large ~/lab09/genomes/GCF_000027325.1_ASM2732v1_genomic.fna   --min-contig 0 --threads 2 -o ~/lab09/quast_myco_NCBI
+  397  quast.py --large ~/lab09-$MYGIT/assembly/scaffolds.fasta   --min-contig 0 --threads 2 -o ~/labs/lab09-$MYGIT/quast_myco_spades
+  398  quast.py --large ~/lab09/assembly/scaffolds.fasta   --min-contig 0 --threads 2 -o ~/labs/lab09-/quast_myco_spades
+  399  mv lab09 lab09-s1-iberger
+  400  history > lab9.commandhistory.txt
+  401  cd ~/lab09-$MYGIT
+  402  find . -size +5M | sed 's|^\./||g' | cat >> .gitignore; awk '!NF || !seen[$0]++' .gitignore
+  403  git add .
+  404  git commit -a -m "Adding all new data files I generated in AWS to the repository."
+  405  git pull --no-edit
+  406  git push 
+  407  xclock &
+  408  cd ~/lab10-s1-ibegrer/
+  409  cd ~/lab10-s1-iberger/
+  410  bash ~/tools/IGV_Linux_2.16.2/igv.sh
+  411  samtools sort SRR1297272.sam -O BAM > SRR1297272.bam
+  412  xclock &
+  413  cd ~/lab10-$MYGIT
+  414  cd ~/lab10-s1-iberger
+  415  cd fastq-files
+  416  fasterq-dump SRR1297272
+  417  fasterq-dump SRR1297281
+  418  less SRR1297281.fastq
+  419  fastqc SRR1297281.fastq
+  420  wkhtmltopdf  --print-media-type SRR1297281_fastqc.html SRR1297281_fastqc.pdf
+  421  java -jar ~/tools/trimmomatic.jar SE -phred33 SRR1297272.fastq SRR1297272.trimmed.fastq  LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+  422  java -jar ~/tools/trimmomatic.jar  SE -phred33 SRR1297281.fastq SRR1297281.trimmed.fastq  LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+  423  cd ~/lab10-s1-iberger/genome
+  424  wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/209/225/GCF_000209225.1_ASM20922v1/GCF_000209225.1_ASM20922v1_genomic.fna.gz && gunzip GCF_000209225.1_ASM20922v1_genomic.fna.gz
+  425  wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/209/225/GCF_000209225.1_ASM20922v1/GCF_000209225.1_ASM20922v1_genomic.gff.gz && gunzip GCF_000209225.1_ASM20922v1_genomic.gff.gz
+  426  hisat2-build ~/lab10-s1-iberger/genome/GCF_000209225.1_ASM20922v1_genomic.fna nemat_genome_index
+  427  cd ~/lab10-s1-iberger/mapping
+  428  hisat2  -U ../fastq-files/SRR1297272.trimmed.fastq -S SRR1297272.sam -x ../genome/nemat_genome_index  -p 2
+  429  hisat2  -U ../fastq-files/SRR1297281.trimmed.fastq -S SRR1297281.sam -x ../genome/nemat_genome_index  -p 2
+  430  hisat2  -U ../fastq-files/SRR1297281.trimmed.fastq -S SRR1297281.sam -x ../genome/nemat_genome_index  -p 1
+  431  samtools sort SRR1297281.sam -O BAM > SRR1297281.bam 
+  432  hisat2  -U ../fastq-files/SRR1297281.trimmed.fastq -S SRR1297281.sam -x ../genome/nemat_genome_index 
+  433  samtools sort SRR1297272.sam -O BAM > SRR1297272.bam
+  434  mfold SEQ="myseq.txt"
+  435  parsimony(my15Trees, data=animalGene)
+  436  R --vanilla
+  437  git clone https://github.com/Bio312/lab10-$MYGIT 
+  438  git clone https://github.com/Bio312/lab10-$MYGIT 
+  439  rm lab10-key -r
+  440  q
+  441  rm lab10-key -d
+  442  rm lab10-key
+  443  rm lab10-key -r
+  444  rm lab10-key -rf
+  445  pwd
+  446  ls
+  447  rm lab10 -rf
+  448  ls
+  449  git clone https://github.com/Bio312/lab10-$MYGIT 
+  450  cd ~/lab10-$MYGIT
+  451  ls
+  452  cd fastq-files
+  453  fasterq-dump SRR1297272
+  454  fasterq-dump SRR1297281
+  455  less SRR1297281.fastq
+  456  fastqc SRR1297281.fastq
+  457  wkhtmltopdf  --print-media-type SRR1297281_fastqc.html SRR1297281_fastqc.pdf
+  458  java -jar ~/tools/trimmomatic.jar SE -phred33 SRR1297272.fastq SRR1297272.trimmed.fastq  LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+  459  java -jar ~/tools/trimmomatic.jar  SE -phred33 SRR1297281.fastq SRR1297281.trimmed.fastq  LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+  460  cd ~/lab10-s1-iberger/genome
+  461  pwd
+  462  cd ~/lab10-s1-iberger/genome
+  463  pwd
+  464  mv/lab10-key /lab10-s1-iberger
+  465  pwd
+  466  rename lab10-key
+  467  #mv
+  468  lab10-s1-iberger\
+  469  #mv
+  470  lab10-key
+  471  rename 's/lab10-key/lab10-s1-iberger'
+  472  sudo apt install rename
+  473  rename 's/^lab10-key$/lab10-s1-iberger/' lab10-s1-iberger
+  474  rename --help
+  475  -h
+  476  mv lab10-key lab10-s1-iberger
+  477  pwd
+  478  cd ~/home/bio312-user
+  479   ~/home/bio312-user
+  480  cd ~/bio312-user
+  481   ~/bio312-user
+  482  ~/bio312-user
+  483  cd ~/bio312-user
+  484  pwd
+  485  cd
+  486  pwd
+  487  mv lab10-key lab10-s1-iberger
+  488  ls
+  489  cd ~/lab10-s1-iberger
+  490  pwd
+  491  ls
+  492  mkdir lab03-dev
+  493  cd lab03-dev
+  494  ls
+  495  cd ../
+  496  cd lab03
+  497  ls
+  498  cd proteomes
+  499  ls
+  500  cd ../
+  501  ls
+  502  cd ../
+  503  cd lascreen -dRR
+  504  screen -dRR
+  505  cd proteomes
+  506  ls
+  507  pwd
+  508  ls
+  509  cd ../
+  510  ls
+  511  cd epas1
+  512  ls
+  513  cd ../
+  514  cd globins
+  515  ls
+  516  less globins.blastp.detail.filtered.out
+  517  ls
+  518  cd ../
+  519  ls
+  520  cd epas1
+  521  ls
+  522  less globins.blastp.detail.filtered.out
+  523  cd ../
+  524  ls
+  525  cd globins
+  526  ls
+  527  less globins.blastp.detail.out
+  528  cd ../
+  529  ls
+  530  mkdir allhuman
+  531  cd allhuman
+  532  nano blast_unique_orthogroups.sh
+  533  xchmod +x blast_unique_orthogroups.sh
+  534  chmod +x blast_unique_orthogroups.sh
+  535  bash blast_unique_orthogroups.sh 
+  536  ls
+  537  df
+  538  df -h
+  539  ls
+  540  cd blast_results/
+  541  ls
+  542  less all_vs_all.blastp.out 
+  543  ls -h
+  544  ls -lh
+  545  rm all_vs_all.blastp.out 
+  546  cd ../
+  547  ls
+  548  cd ../
+  549  ls
+  550  cd proteomes/
+  551  ls
+  552  seqkit grep -r -p "H.sapiens_CYGB_cytoglobin" H.sapiens.longest.renamed.faa 
+  553  sudo yum update
+  554  /usr/bin/dnf check-release-update
+  555  dnf upgrade
+  556  sudo dnf upgrade
+  557  sudo dnf update -y
+  558  sudo dnf upgrade -y
+  559  /usr/bin/dnf check-release-update
+  560  sudo dnf upgrade --releasever=2023.8.20250721 -y
+  561   dnf upgrade --releasever=2023.8.20250721
+  562  sudo  dnf upgrade --releasever=2023.8.20250721
+  563  df -h
+  564  ls
+  565  cd dat
+  566  cd datga
+  567  cd data
+  568  ls
+  569  cd ../
+  570  rm -rf lab12-s1-iberger/
+  571  rm -rf lab13-TheStellarScientist/
+  572  rm -rf lab13-s1-iberger/
+  573  rm -rf lab13-s4-kostil/
+  574  rm -rf lab13-s5-olivarahman/
+  575  ls
+  576  rm -rf *iberger*
+  577  ls
+  578  cd labs
+  579  ls
+  580  cd  lab09-
+  581  ls
+  582  cd ../
+  583  rm -rf labs
+  584  ls
+  585  df -h
+  586  sudo dnf upgrade --releasever=2023.8.20250721 -y
+  587  sudo reboot
+  588  ls
+  589  cd lab02
+  590  cd lab02-key
+  591  ls
+  592  ls
+  593  sudo sed -i 's/^#\?PasswordAuthentication .*/PasswordAuthentication yes/' /etc/ssh/sshd_config
+  594  sudo sed -i 's/^#\?ChallengeResponseAuthentication .*/ChallengeResponseAuthentication no/' /etc/ssh/sshd_config
+  595  sudo systemctl restart sshd
+  596  sudo sed -i 's/^#\?PasswordAuthentication .*/PasswordAuthentication yes/' /etc/ssh/sshd_config
+  597  sudo sed -i 's/^#\?ChallengeResponseAuthentication .*/ChallengeResponseAuthentication no/' /etc/ssh/sshd_config
+  598  sudo systemctl restart sshd
+  599  # allow SSH password auth
+  600  echo 'ssh_pwauth: true' | sudo tee /etc/cloud/cloud.cfg.d/99-ssh-pwauth.cfg
+  601  # don’t force password change on first boot
+  602  printf '%s\n' 'chpasswd:' '  expire: false' | sudo tee /etc/cloud/cloud.cfg.d/99-chpasswd.cfg
+  603  echo 'bio312-user:bio312isCOOL!' | sudo chpasswd
+  604  ls
+  605  cd aryl
+  606  ls
+  607  cd ../
+  608  ls
+  609  rm -rf aryl
+  610  cd igv
+  611  ls
+  612  cd genomes
+  613  ls
+  614  less user-defined-genomes.txt 
+  615  cd ../
+  616  cd igv
+  617  ls
+  618  less igv0.log 
+  619  less prefs.properties 
+  620  cd ../
+  621  rm -rf key
+  622  ls
+  623  cd data
+  624  ls
+  625  less animal.txt
+  626  cat >animal.txt
+  627  less animal.txt
+  628  ls
+  629  cd Pfam
+  630  ls
+  631  cd ../
+  632  ls
+  633  cd ../
+  634  ls
+  635  cd igv
+  636  ls
+  637  cd genomes/
+  638  ls
+  639  cd ../
+  640  rm -rf igv
+  641  ls
+  642  less workspace.code-workspace 
+  643  rm workspace.code-workspace 
+  644  ls
+  645  pwd
+  646  cd ../
+  647  ls
+  648  cd iberger
+  649  sudo deluser --remove-home iberger
+  650  sudo userdel -r iberger
+  651  ls
+  652  cd ec2-user/
+  653  ls
+  654  cd bio312-user/
+  655  ls
+  656  cd tools
+  657  ls
+  658  cd RANGER-DTL_RecPhyloXML/
+  659  ls
+  660  cd ../
+  661  rm RANGER-DTL_RecPhyloXML.zip
+  662  ls
+  663  cd ../
+  664  ls
+  665  cd miniforge3/
+  666  ls
+  667  cd ../
+  668  ls
+  669  rm -rf lab*
+  670  ls
+  671  df -h
+  672  ls
+  673  mamba install -c conda-forge -c salilab dssp -y 
+  674  muscle
+  675  which muscle
+  676  cd /usr/bin
+  677  curl -L -o USalign https://zhanggroup.org/US-align/download/USalign
+  678  sudo curl -L -o USalign https://zhanggroup.org/US-align/download/USalign
+  679  ls USalign 
+  680  .USalign
+  681  cd USalign
+  682  USalign
+  683  chmod +x USalign
+  684  sudo chmod +x USalign
+  685  USalign
+  686  rm USalign 
+  687  sudo rm USalign 
+  688  cd
+  689  wget https://zhanggroup.org/US-align/bin/module/USalignLinux64.zip
+  690  unzip USalignLinux64.zip 
+  691  ls
+  692  cd USalign/
+  693  ls
+  694  g++ -static -O3 -ffast-math -o USalign USalign.cpp
+  695  sudo dnf groupinstall "Development Tools"
+  696  g++ -O3 -ffast-math -o USalign USalign.cpp
+  697  ls
+  698  ./USalign
+  699  sudo mv USalign /usr/bin/.
+  700  chmod +x /usr/bin/USalign
+  701  cd 
+  702  USalign
+  703  ls
+  704  rm -rf USalign
+  705  rm *.zip
+  706  ls
+  707  cd miniforge3/
+  708  ls
+  709  cd pkgs
+  710  ls
+  711  dssp
+  712  cd ../
+  713  wget https://zhanggroup.org/TM-align/TMalign.cpp
+  714  ls
+  715  g++ -O3 -ffast-math -lm -o TMalign TMalign.cpp
+  716  ./TMalign 
+  717  sudo cp TMalign /usr/bin/.
+  718  chmod +x /usr/bin/TMalign
+  719  sudo chmod +x /usr/bin/TMalign
+  720  TMalign
+  721  ls
+  722  rm -rf TMalign
+  723  rm TMalign.cpp 
+  724  ls
+  725  screen 
+  726  mamba create -n bio312 -c conda-forge -c bioconda   python=3.11 biopython gemmi pdbfixer pdb-tools   mdtraj prody nglview py3Dmol   mafft muscle mmseqs2   foldseek   openjdk=17 graphviz   pandas numpy matplotlib -y
+  727  mamba install -n bio312 -c conda-forge -c salilab dssp -y  # package 'dssp' provides mkdssp
+  728  foldseek
+  729  conda activate bio312
+  730  foldseek
+  731  USalign
+  732  TMalign
+  733  mkdssp
+  734  conda deactivate bio312
+  735  conda deactivate
+  736  R --vanilla
+  737  sudo R --vanilla
+  738  ls()
+  739  ls
+  740  cd data
+  741  ls
+  742  cd ../
+  743  ls
+  744  cd data
+  745  ls
+  746  cd ../
+  747  ls
+  748  cd tools
+  749  ls
+  750  cd ../
+  751  ls
+  752  jupyter lab 
+  753  module load bio312
+  754  conda load bio312
+  755  conda activate bio312
+  756  jupyter lab
+  757  python -m pip show py3Dmol
+  758  conda list py3Dmol
+  759  ls
+  760  git config --global --unset credential.helper 2>/dev/null || true
+  761  sudo git config --system --unset credential.helper 2>/dev/null || true
+  762  rm -f ~/.git-credentials
+  763  sudo rm -f /etc/git-credentials
+  764  git credential reject <<EOF
+  765  protocol=https
+  766  host=github.com
+  767  EOF
+  768  git clone https://github.com/Bio312/lab02-key
+  769  ls
+  770  filterGFF
+  771  which filterGFF
+  772  sudo cat >/usr/local/bin/filterGFF_gene_tx.sh
+  773  ls
+  774  cat >filterGFF_gene_tx.sh
+  775  ls
+  776  which filterGFF
+  777  sudo mv filterGFF_gene_tx.sh /usr/local/bin/filterGFF_gene_tx
+  778  sudo chmod +x /usr/local/bin/filterGFF_gene_tx 
+  779  filterGFF_gene_tx
+  780  ls
+  781  git config --global user.name "Shelley Yu"
+  782  git config --global user.email "shelley.yu@stonybrook.edu"
+  783  ssh-keygen -t ed25519 -C "shelley.yu@stonybrook.edu"
+  784  eval "$(ssh-agent -s)"
+  785  ssh-add ~/.ssh/id_ed25519
+  786  cat ~/.ssh/id_ed25519.pub
+  787  ssh -T git@github.com
+  788  git clone git@github.com:Bio312/lab02-s5-syu.git
+  789  cd lab02-s5-syu
+  790  git remote set-url origin git@github.com:Bio312/lab02-s5-syu.git
+  791  1s
+  792  ls
+  793  MYGIT="s5-syu"
+  794  echo $MYGIT
+  795  echo my git username is $MYGIT
+  796  echo "export MYGIT=$MYGIT" >> ~/.bashrc
+  797  cd ~/lab02-$MYGIT
+  798  ls
+  799  ncbi-acc-download -h
+  800  ncbi-acc-download -F genbank "NC_000022.11"
+  801  ls
+  802  less NC_000022.11.gbk
+  803  ncbi-acc-download -F fasta "NC_000022.11"
+  804  ncbi-acc-download -F gff3 "NC_000022.11"
+  805  ls
+  806  ncbi-acc-download -F gff3 "NC_000022.11"
+  807  filterGFF_gene_tx MB NC_000022.11.gff 4
+  808  gt gff3 -sort -tidy -force -o MB.sorted.gff MB.X4.gff
+  809  gt stat -genelengthdistri -exonlengthdistri -intronlengthdistri -cdslengthdistri   -addintrons -force -o MB.sorted.counts.gff MB.sorted.gff
+  810  less MB.sorted.counts.gff
+  811  gt gff3 -sort -tidy -o NC_000022.11.sorted.gff NC_000022.11.gff
+  812  gt stat -genelengthdistri -exonlengthdistri -intronlengthdistri -cdslengthdistri -addintrons -force -o NC_000022.11.counts.txt NC_000022.11.sorted.gff
+  813  less NC_000022.11.counts.txt
+  814  bedtools getfasta -s -fi NC_000022.11.fa -fo MB.X4.cds.fa -bed MB.X4.cds.gff
+  815  less MB.X4.cds.fa
+  816  union MB.X4.cds.fa -outseq MB.X4.cds.union.fa
+  817  transeq MB.X4.cds.union.fa MB.X4.protein.fa
+  818  less MB.X4.protein.fa
+  819  union MB.X4.cds.fa -outseq MB.X4.cds.union.fa
+  820  transeq MB.X4.cds.union.fa MB.X4.protein.fa
+  821  less MB.X4.protein.fa
+  822  history > lab2.commandhistory.txt
+  823  tail -n 20 lab2.commandhistory.txt
+  824  git status
+  825  # Append paths of files >5MB to .gitignore (strip leading ./)
+  826  find . -size +5M | sed 's|^\./||' >> .gitignore
+  827  # De-duplicate .gitignore and remove empty lines (write changes back)
+  828  awk 'NF && !seen[$0]++' .gitignore > .gitignore.tmp && mv .gitignore.tmp .gitignore
+  829  git add .
+  830  git status
+  831  git commit -m "Add lab 2 work: command history, analysis outputs, notes"
+  832  git status
+  833  git pull --rebase --autostash
+  834  git status
+  835  git push
+  836  git status
+  837  echo 'Hello World'
+  838   echo "”.devlove ,gnieb era dna ,neeb evah lufrednow tsom dna lufituaeb tsom smrof sseldne gninnigeb a elpmis os morf ,ytivarg fo wal dexif eht ot gnidrocca no gnilcyc enog sah tenalp siht tslihw ,taht dna ;eno otni ro smrof wef a otni dehtaerb yllanigiro neeb gnivah ,srewop lareves sti htiw ,efil fo weiv siht ni ruednarg si erehT“" | rev
+  839  cd
+  840  pwd
+  841  cd data
+  842  ls
+  843  cat animal.txt
+  844  cd
+  845  ls -l
+  846  df
+  847  df -h
+  848  git clone git@github.com:Bio312/lab03-$MYGIT.git
+  849  cd lab03-s5-syu
+  850  ls
+  851  pwd
+  852  ls
+  853  9739 9763 9913 9708 9704 9644 9669 9771 9785 9606 9796 9925 9615 185453 28377 7957 7897
+  854  cd ~/lab03-s5-syu
+  855  gunzip ~/lab03-$MYGIT/proteomes/*.gz
+  856  cat  ~/lab03-$MYGIT/proteomes/*.faa > ~/lab03-$MYGIT/allprotein.fas
+  857  makeblastdb -in ~/lab03-$MYGIT/allprotein.fas -dbtype prot
+  858  mkdir ~/lab03-$MYGIT/myoglobin
+  859  mkdir ~/lab03-s5-syu/myoglobin
+  860  cd ~/lab03-$MYGIT/myoglobin
+  861  pwd
+  862  samtools faidx ~/lab03-$MYGIT/allprotein.fas 'Hsap|NP_001349775.1|MB'
+  863  samtools faidx ~/lab03-$MYGIT/allprotein.fas 'Hsap|NP_001349775.1|MB' > ~/lab03-$MYGIT/myoglobin/NP_001349775.1.fa
+  864  less NP_001349775.1.fa
+  865  ls NP_001349775.1.fa
+  866  less NP_001349775.1.fa
+  867  ls NP_001349775.1.fa
+  868  blastp -db ~/lab03-$MYGIT/allprotein.fas -query ~/lab03-$MYGIT/myoglobin/NP_001349775.1.fa -outfmt 0 -max_hsps 1 -out ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.typical.out
+  869  blastp -db ~/lab03-$MYGIT/allprotein.fas -query ~/lab03-$MYGIT/myoglobin/NP_001349775.1.fa -outfmt "6 sseqid pident length mismatch gapopen evalue bitscore pident stitle" -max_hsps 1 -out ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.out
+  870  grep -c Hsap ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.out
+  871  grep Hsap ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.out
+  872  awk '{if ($6< 1e-30)print $1 }' ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.out > ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.filtered.out
+  873  ><img src="img/brightspace.png" alt= “” width="20" height="20">
+  874  <img src="img/brightspace.png" alt= “” width="20" height="20">
+  875  wc -l ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.filtered.out
+  876  cut -d '|' -f 1 ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.filtered.out | sort | uniq -c
+  877  find . -size +5M | sed 's|^\./||' >> .gitignore
+  878  awk 'NF && !seen[$0]++' .gitignore > .gitignore.tmp && mv .gitignore.tmp .gitignore
+  879  git add .
+  880  git commit -m "Finished working on myoglobin; adding blast output, etc."
+  881  git pull --rebase --autostash
+  882  git status
+  883  git pull --rebase --autostash
+  884  git commit -m "Finished working on myoglobin; adding blast output, etc."
+  885  find . -size +5M | sed 's|^\./||' >> .gitignore
+  886  cd ..
+  887  status
+  888  git status
+  889  find . -size +5M | sed 's|^\./||' >> .gitignore
+  890  awk 'NF && !seen[$0]++' .gitignore > .gitignore.tmp && mv .gitignore.tmp .gitignore
+  891  git add .
+  892  git commit -m "Finished working on myoglobin; adding blast output, etc."
+  893  git pull --rebase --autostash
+  894  git status
+  895  git push
+  896  mkdir ~/lab03-$MYGIT/SPTY2D1
+  897  cd ~/lab03-$MYGIT/SPTY2D1 
+  898  pwd
+  899  cd ~/lab03-$MYGIT/SPTY2D1
+  900  pwd
+  901  samtools faidx ~/lab03-$MYGIT/allprotein.fas 'Hsap|NP_919261.2|SPTY2D1
+  902  cd ~/lab03-$MYGIT/SPTY2D1
+  903  [bio312-user@ip-172-31-18-224 SPTY2D1]$
+  904  pwd
+  905  cd..
+  906  samtools faidx ~/lab03-$MYGIT/allprotein.fas 'Hsap|NP_919261.2|SPTY2D1
+  907  '
+  908  samtools faidx ~/lab03-$MYGIT/allprotein.fas 'Hsap|NP_919261.2|SPTY2D1'
+  909  samtools faidx ~/lab03-$MYGIT/allprotein.fas 'Hsap|NP_919261.2|SPTY2D1' > ~/lab03-$MYGIT/SPTY2D1/NP_001349775.1.fa
+  910  less NP_001349775.1.fa
+  911  ls NP_001349775.1.fa
+  912  blastp -db ~/lab03-$MYGIT/allprotein.fas -query ~/lab03-$MYGIT/SPY2D1/NP_001349775.1.fa -outfmt 0 -max_hsps 1 -out ~/lab03-$MYGIT/SPY2D1/.blastp.typical.out
+  913  blastp -db ~/lab03-$MYGIT/allprotein.fas -SPY2D1 ~/lab03-$MYGIT/SPY2D1/NP_001349775.1.fa -outfmt 0 -max_hsps 1 -out ~/lab03-$MYGIT/SPY2D1/.blastp.typical.out
+  914  blastp -db ~/lab03-$MYGIT/allprotein.fas -query ~/lab03-$MYGIT/myoglobin/NP_919261.2.1.fa -outfmt 0 -max_hsps 1 -out ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.typical.out
+  915  samtools faidx ~/lab03-$MYGIT/allprotein.fas 'Hsap|NP_919261.2|SPTY2D1' > ~/lab03-$MYGIT/SPTY2D1/NP_919261.2.fa
+  916  less NP_919261.2.fa
+  917  ls NP_919261.2.fa
+  918  blastp -db ~/lab03-$MYGIT/allprotein.fas -query ~/lab03-$MYGIT/myoglobin/NP_919261.2.fa -outfmt 0 -max_hsps 1 -out ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.typical.out
+  919  pwd
+  920  cd ~/lab03-$MYGIT/SPTY2D1
+  921  samtools faidx ~/lab03-$MYGIT/allprotein.fas 'Hsap|NP_919261.2|MB'
+  922  cd ~/lab03-$MYGIT/SPTY2D1
+  923  samtools faidx ~/lab03-$MYGIT/allprotein.fas 'Hsap|NP_919261.2|SPTY2D1'
+  924  samtools faidx ~/lab03-$MYGIT/allprotein.fas 'Hsap|NP_919261.2|SPTY2D1' > ~/lab03-$MYGIT/SPTY2D1/NP_919261.2.1.fa
+  925  less NP_919261.2.1.fa
+  926  ls NP_919261.2.1.fa
+  927  blastp -db ~/lab03-$MYGIT/allprotein.fas -query ~/lab03-$MYGIT/SPTY2D1/NP_919261.2.1.fa -outfmt 0 -max_hsps 1 -out ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.typical.out
+  928  pwd
+  929  blastp -db ~/lab03-$MYGIT/allprotein.fas -query ~/lab03-$MYGIT/SPTY2D1/NP_919261.2.1.fa -outfmt "6 sseqid pident length mismatch gapopen evalue bitscore pident stitle" -max_hsps 1 -out ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.out
+  930  grep -c Hsap ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.out
+  931  grep Hsap ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.out
+  932  awk '{if ($6< 1e-30)print $1 }' ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.out > ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.filtered.out
+  933  cut -d '|' -f 1 ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.filtered.out | sort | uniq -c
+  934  awk '{if ($6< 1e-30)print $1 }' ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.out > ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.filtered.out
+  935  awk '{if ($6< 1e-30)print $1 }' ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.out > ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.filtered.out
+  936  wc -l ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.filtered.out
+  937  cd ~/lab03-$MYGIT/myoglobin
+  938  pwd
+  939  cut -d '|' -f 1 ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.filtered.out | sort | uniq -c
+  940  cut -f1 SPTY2D1.blastp.detail.filtered.out | cut -d'|' -f1 | sort | uniq -c
+  941   cd ~/lab03-$MYGIT/SPTY2D1
+  942  awk '$7 <= 1e-30' SPTY2D1.blastp.detail.out > SPTY2D1.blastp.detail.filtered.out
+  943  cut -f1 SPTY2D1.blastp.detail.filtered.out | cut -d'|' -f1 | sort | uniq -c
+  944  cd ~/lab03-$MYGIT/SPTY2D1
+  945  pwd
+  946  awk '{if ($6< 1e-30)print $1 }' ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.out > ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.filtered.out
+  947  pwc
+  948  pwd
+  949  awk '{if ($6< 1e-30)print $1 }' ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.out > ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.filtered.out
+  950  wc -l ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.filtered.out
+  951  awk '$7 <= 1e-30 {print $1}' ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.out   | cut -d'|' -f1   | sort | uniq -c
+  952  awk '$7 <= 1e-30 {print $1}' ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.out \ | cut -d'|' -f1 \ | sort | uniq -c
+  953  cd ~/lab03-$MYGIT
+  954  history > ~/lab03-$MYGIT/lab3.commandhistory.txt
+  955  find . -size +5M | sed 's|^\./||' >> .gitignore
+  956  awk 'NF && !seen[$0]++' .gitignore > .gitignore.tmp && mv .gitignore.tmp .gitignore
+  957  git add .
+  958  git commit -m "Add lab 3 work: blast output, etc."
+  959  git pull --rebase --autostash
+  960  git status
+  961  git push
+  962  git clone git@github.com:Bio312/lab04-$MYGIT.git
+  963  cd lab04-$MYGIT
+  964  ls
+  965  git clone git@github.com:Bio312/lab04-$MYGIT.git
+  966  cd lab04-$MYGIT
+  967  ls
+  968  nano ~/lab04-$MYGIT/toy.fas 
+  969  muscle -align ~/lab04-$MYGIT/toy.fas -output ~/lab04-$MYGIT/toy.al.fas
+  970  alv -kli  ~/lab04-$MYGIT/toy.al.fas 
+  971  t_coffee -other_pg seq_reformat -in ~/lab04-$MYGIT/toy.al.fas -output sim
+  972  alignbuddy -pi ~/lab04-$MYGIT/toy.al.fas
+  973   alignbuddy -pi ~/lab04-$MYGIT/toy.al.fas | awk ' (NR>2)  { for (i=2;i<=NF  ;i++){ sum+=$i;num++} }
+  974       END{ print(100*sum/num) } '
+  975  cd ~/lab03-$MYGIT/myoglobin
+  976  grep -c Hsap ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.out
+  977  	
+  978  ~/lab03-$MYGIT/allprotein.fas
+  979  	
+  980  ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.filtered.out
+  981  pwd
+  982  /home/bio312-user/lab03-s5-syu/myoglobin
+  983  /home/bio312-user/lab03-s5-syu
+  984  cd ~/lab03-$MYGIT/
+  985  cd ~/lab04-$MYGIT/
+  986  pwd
+  987  mkdir ~/lab04-$MYGIT/myoglobin
+  988  cd ~/lab04-$MYGIT/myoglobin
+  989  pwd
+  990  seqkit grep --pattern-file ~/lab03-$MYGIT/myoglobin/myoglobin.blastp.detail.filtered.out ~/lab03-$MYGIT/allprotein.fas | seqkit grep -v -p "carpio" > ~/lab04-$MYGIT/myoglobin/myoglobin.homologs.fas
+  991  less
+  992  less myoglobin.homologs.fas
+  993  muscle -align ~/lab04-$MYGIT/myoglobin/myoglobin.homologs.fas -output ~/lab04-$MYGIT/myoglobin/myoglobin.homologs.al.fas
+  994  alv -kli  ~/lab04-$MYGIT/myoglobin/myoglobin.homologs.al.fas | less -RS
+  995  alv -kli --majority ~/lab04-$MYGIT/myoglobin/myoglobin.homologs.al.fas | less -RS
+  996   Rscript --vanilla ~/lab04-$MYGIT/plotMSA.R  ~/lab04-$MYGIT/myoglobin/myoglobin.homologs.al.fas
+  997  pwd
+  998  alignbuddy  -al  ~/lab04-$MYGIT/myoglobin/myoglobin.homologs.al.fas
+  999  alignbuddy -trm all  ~/lab04-$MYGIT/myoglobin/myoglobin.homologs.al.fas | alignbuddy  -al
+ 1000  alignbuddy -dinv 'ambig' ~/lab04-$MYGIT/myoglobin/myoglobin.homologs.al.fas | alignbuddy  -al
+ 1001  t_coffee -other_pg seq_reformat -in ~/lab04-$MYGIT/myoglobin/myoglobin.homologs.al.fas -output sim
+ 1002   alignbuddy -pi ~/lab04-$MYGIT/myoglobin/myoglobin.homologs.al.fas | awk ' (NR>2)  { for (i=2;i<=NF  ;i++){ sum+=$i;num++} }
+     END{ print(100*sum/num) } '
+ 1003  mkdir ~/lab04-$MYGIT/SPTY2D1
+ 1004  cd ~/lab04-$MYGIT/SPTY2D1
+ 1005  pwd
+ 1006  seqkit grep --pattern-file ~/lab03-$MYGIT/SPTY2D1/SPTY2D1.blastp.detail.filtered.out ~/lab03-$MYGIT/allprotein.fas | seqkit grep -v -p "carpio" > ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.fas
+ 1007  muscle -align ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.fas -output ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.fas
+ 1008  alv -kli  ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.fas | less -RS
+ 1009  alv -kli --majority ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.fas | less -RS
+ 1010   Rscript --vanilla ~/lab04-$MYGIT/plotMSA.R  ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.fas
+ 1011  alv -kli  ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.fas | less -RS
+ 1012  alignbuddy  -al  ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.fas
+ 1013  alignbuddy -trm all  ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.fas | alignbuddy  -al
+ 1014  t_coffee -other_pg seq_reformat -in ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.fas -output sim
+ 1015  alignbuddy -dinv 'ambig' ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.fas | alignbuddy  -al
+ 1016  t_coffee -other_pg seq_reformat -in ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.fas -output sim
+ 1017   alignbuddy -pi ~/lab04-$MYGIT/SPTY2D1/SPTY2D1.homologs.al.fas | awk ' (NR>2)  { for (i=2;i<=NF  ;i++){ sum+=$i;num++} }
+     END{ print(100*sum/num) } '
+ 1018  history > lab4.commandhistory.txt
